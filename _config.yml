@@ -131,9 +131,18 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/uoft.jpg"
+  - image: "/img/timeline/cam.jpeg"
+    date: "September 2017 - June 2018"
+    description: "Achieved a dinstinction in an MPhil Advanced Computer Science"
+  - image: "/img/timeline/db.png"
+    date: "Summer 2016"
+    description: "Summer Technology Internship at Deutsche Bank"
+  - image: "/img/timeline/uoft.png"
     date: "September 2015 - August 2016"
     description: "Studied Abroad at University of Toronto"
+  - image: "/img/timeline/imperial.png"
+    date: "Summer 2015"
+    description: "Junior Researcher at the Quantum Optics and Laser Group"
   - image: "/img/timeline/ucl.png"
     date: "September 2013 - August 2017"
     description: "Achieved 1st Class Honours at
