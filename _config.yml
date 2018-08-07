@@ -24,7 +24,7 @@ twitter_username: "@akbirkhan"
 github_username:  "am-khan"
 
 # Build settings
-remote_theme: le4ker/personal-jekyll-theme
+theme: hanuman
 plugins:
   - jekyll-feed
 
