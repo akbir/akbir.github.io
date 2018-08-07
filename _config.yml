@@ -131,7 +131,7 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/cam2.jpg"
+  - image: "/img/timeline/cam2.png"
     date: "September 2017 - June 2018"
     description: "Awarded a dinstinction in an MPhil for Advanced Computer Science"
   - image: "/img/timeline/db.png"
