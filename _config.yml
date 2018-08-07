@@ -58,7 +58,7 @@ lines: # You can add HTML Tags in the Text
   - text: "Sean, you're a dickhead."
   - text: "Where’s your will to be weird?"
 
-me-img: "/img/profile.jpg"
+me-img: "/img/profile.png"
 
 # To use facebook profile pic comment the previous line and uncomment the following
 # line, and replace 'user_id' with your facebook user id.
