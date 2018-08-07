@@ -32,7 +32,7 @@ lang: "en"
 author: "Akbir M Khan"
 title: "{ Akbir M Khan }"
 description: "Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+keywords: "khan, akbir, personal, machinelearning, resume"
 favicon: "/img/favicon.ico"
 
 ################
@@ -131,12 +131,12 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
-    date: "September 2013 - Today"
-    description: "Saving the neighborhood!"
+  - image: "/img/timeline/uoft.png"
+    date: "September 2015 - August 2016"
+    description: "Studied Abroad at University of Toronto"
   - image: "/img/timeline/ucl.png"
     date: "September 2013 - August 2017"
-    description: "Achieved 1st Class Honours at \n
+    description: "Achieved 1st Class Honours at
     University College London"
 
 # First image of the Timeline
