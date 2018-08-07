@@ -55,10 +55,10 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
+  - text: "Sean, you're a dickhead."
   - text: "Where’s your will to be weird?"
 
-me-img: "/img/profile"
+me-img: "/img/profile.jpg"
 
 # To use facebook profile pic comment the previous line and uncomment the following
 # line, and replace 'user_id' with your facebook user id.
@@ -167,7 +167,7 @@ social:
   - title: "facebook"
     url: "https://facebook.com/"
   - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://twitter.com/akbirkhan"
   - title: "github"
     url: "https://github.com/PanosSakkos/personal-jekyll-theme"
   - title: "bitcoin"
