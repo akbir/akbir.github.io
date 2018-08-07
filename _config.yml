@@ -131,9 +131,9 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/cam.jpeg"
+  - image: "/img/timeline/cam.jpg"
     date: "September 2017 - June 2018"
-    description: "Achieved a dinstinction in an MPhil Advanced Computer Science"
+    description: "Awarded a dinstinction in an MPhil for Advanced Computer Science"
   - image: "/img/timeline/db.png"
     date: "Summer 2016"
     description: "Summer Technology Internship at Deutsche Bank"
