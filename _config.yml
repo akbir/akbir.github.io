@@ -32,7 +32,7 @@ lang: "en"
 author: "Akbir M Khan"
 title: "{ Akbir M Khan }"
 description: "Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
-keywords: "khan, akbir, personal, machinelearning, resume"
+keywords: "khan, akbir, personal, machinelearning, resume, akbir.94,"
 favicon: "/img/favicon.ico"
 
 ################
@@ -57,6 +57,8 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "Sean, you're a dickhead."
   - text: "Where’s your will to be weird?"
+  - text: "Grad (student) Descent is Turing Compete"
+  - text: "Couldn't afford the car so she named her daughter alexis"
 
 me-img: "/img/profile.png"
 
@@ -64,6 +66,7 @@ me-img: "/img/profile.png"
 # line, and replace 'user_id' with your facebook user id.
 # Facebook user id can be found by clicking on your profile pic and the large number
 # in the end of the url just before '&type' is your user id.
+
 # Note: fbid is not the same as user id and user id only contains numbers
 
 #me-img: "https://graph.facebook.com/10211414672139205/picture?type=large&width=500&height=500"
@@ -131,18 +134,21 @@ syntax-highlight: True
 ############
 
 events:
+  - image: "/img/timeline/SPDL.png"
+    date: "June 2017 - Now"
+    description: "Working as a Research Engineer at Spherical Defence Labs"
   - image: "/img/timeline/cam2.png"
     date: "September 2017 - June 2018"
-    description: "Awarded a dinstinction in an MPhil for Advanced Computer Science"
+    description: "Awarded a dinstinction in an MPhil for Advanced Computer Science at the University of Cambridge"
   - image: "/img/timeline/db.png"
     date: "Summer 2016"
-    description: "Summer Technology Internship at Deutsche Bank"
+    description: "Summer Technology Internship at Deutsche Bank, London"
   - image: "/img/timeline/uoft.png"
     date: "September 2015 - August 2016"
     description: "Studied Abroad at University of Toronto"
   - image: "/img/timeline/imperial.png"
     date: "Summer 2015"
-    description: "Junior Researcher at the Quantum Optics and Laser Group"
+    description: "Junior Researcher at the Quantum Optics and Laser Group at Imperial College London"
   - image: "/img/timeline/ucl.png"
     date: "September 2013 - August 2017"
     description: "Achieved 1st Class Honours at
@@ -179,7 +185,7 @@ social:
   - title: "twitter"
     url: "https://twitter.com/akbirkhan"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
+    url: "https://github.com/am-khan"
   - title: "bitcoin"
     url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
   - title: "rss"
