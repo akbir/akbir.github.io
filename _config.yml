@@ -57,8 +57,7 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "Proving Grad (student) Descent is Turing Complete"
   - text: "Cause I'm cooler than a polar bear's toenails"
-  - text: "Where’s your will to be weird?"
-  - text: "Couldn't afford the car so she named her daughter alexis"
+  - text: "Couldn't afford the car so she named her daughter Alexis"
 
 me-img: "/img/profile.png"
 
@@ -136,10 +135,10 @@ syntax-highlight: True
 events:
   - image: "/img/timeline/spdl.png"
     date: "June 2017 - Now"
-    description: "Working as a Research Engineer at Spherical Defence Labs"
+    description: "Research Engineer at Spherical Defence Labs"
   - image: "/img/timeline/cam2.png"
     date: "September 2017 - June 2018"
-    description: "Awarded a dinstinction in an MPhil for Advanced Computer Science at the University of Cambridge"
+    description: "Distinction in the MPhil for Advanced Computer Science at the University of Cambridge"
   - image: "/img/timeline/db.png"
     date: "Summer 2016"
     description: "Summer Technology Internship at Deutsche Bank, London"
