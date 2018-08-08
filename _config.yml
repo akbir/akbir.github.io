@@ -134,7 +134,7 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/SPDL.png"
+  - image: "/img/timeline/spdl.png"
     date: "June 2017 - Now"
     description: "Working as a Research Engineer at Spherical Defence Labs"
   - image: "/img/timeline/cam2.png"
