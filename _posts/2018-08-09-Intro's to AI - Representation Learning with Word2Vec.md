@@ -57,4 +57,4 @@ However, word2vec isn’t without limitations. The largest problem comes from ho
 I’ll discuss in the follow up blog how we can tackle these issues.
 
 
-*This Blog is part of a larger series which is also posted for Spherical Defence Labs, you can find out more about them guys* [*here.*](http://sphericaldefence.com/)
+*This blog is part of a larger series which is also posted for Spherical Defence Labs, you can find out more about them guys* [*here.*](http://sphericaldefence.com/)
