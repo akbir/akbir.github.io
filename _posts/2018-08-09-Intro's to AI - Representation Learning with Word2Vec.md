@@ -47,6 +47,16 @@ We train the model, so it’s allowed to change the word embedding layer to try 
 
 When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (King/Queen, Man/Woman, Mr/Mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).
 
+![relations](/img/relations.png)
+
+Finally, as vectors are well studied, we can do interesting things with them like addition. This means that those relationships can be quantified as follows:
+
+Rome + France — Paris = Italy
+
+King — man + woman = Queen
+
+These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep a dictionary of the word embedding which knows which vector relates to which word. Then for more complicated for more difficult tasks (like translation), the neural networks can exploit these geometric relationships to complete its task quicker. For example, a network no longer needs to learn explicitly how to handle “Queen’— it just needs to learn “King”, “man” and “woman”, so one less input to stress about!
+
 These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep the first layer of the network (the word embedding) which knows which vector relates to which word and can use it for more difficult tasks (like translation).
 
 
