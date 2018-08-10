@@ -9,11 +9,11 @@ tags: [ 'word2vec', 'NLP', 'representation learning' ]
 
 So, in this blog we’re going to talk about “representation learning” which is an important part of Machine learning and AI in general.  
 
-As powerful as computers have become they are still relatively ‘stupid’. In fact, computing *power* normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at, is more general abstract questions. That’s stuff like ‘can you notice pedestrians in a photo’ or ‘can you realise how the words King and Queen are related’?
+As powerful as computers have become they are still relatively ‘stupid’. In fact, computing *power* normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like "can you notice pedestrians in a photo" or "can you realise how the words 'king' and 'queen' are related"?
 
-What computers really get is vectors, they love them. By considering vectors as an array (list) of numbers, computers are able to still perform super simple and quick calculations. In addition, vectors already have some hardcore fans, who got obsessed with them through this niche subject called ‘Geometry’. These guys have come from as far as India and Greece and considered lots of ways to tell how similar vectors are (mathematicians would call these metrics).
+What computers really get is vectors, they love them. By considering vectors as an array (list) of numbers, computers are able to still perform super simple and quick calculations. In addition, vectors already have some hardcore fans, who got obsessed with them through this niche subject called "Geometry". These guys have come from as far as India and Greece and considered lots of ways to tell how similar vectors are (mathematicians would call these metrics).
 
-We skip the work they’ve done because you probably learnt it in your Maths class. It’s the intuitive stuff such as ‘the distance between two points’ and ‘the angle between two vectors’ - different ways to measure how similar two vectors are. Depending on our choice of the two vectors, we could make these two measurements very different and, in that process, highlight different *relationships* between whatever those vectors represent.
+We skip the work they’ve done because you probably learnt it in your Maths class. It’s the intuitive stuff such as "the distance between two points" and "the angle between two vectors" - different ways to measure how similar two vectors are. Depending on our choice of the two vectors, we could make these two measurements very different and, in that process, highlight different *relationships* between whatever those vectors represent.
 
 So, the approach that people considered is using vectors to represent abstract concepts, such as “pedestrians in a photo” or words such as “queen”. That way we can still compute things quickly, but the geometric properties between vectors can encode information. If the mitochondrion was the powerhouse of the cell, then the vector is the powerhouse of representation learning.
 
@@ -25,9 +25,9 @@ Within Natural Language Processing, focus has been on producing robust represent
 
 Computers need some way to represent a word. In particular Neural Networks (which do most of the work), need continuous representations. Think of continuous as meaning “not in chunks”, if something is *continuous* then there are no gaps between any two points (e.g in the flow of water). On the otherhand words are *discrete*, they literally are separate tokens, and between things like “cat” and “dog” there is no intermediate concept.
 
-Linguists had a theory dubbed the [“distributional hypothesis”](https://en.wikipedia.org/wiki/Distributional_semantics#Distributional_hypothesis) which suggested that words are defined by the company that they keep. If I remove a _____ from a sentence, you can guess what it is (in this case ‘word’).  A group of [computer scientists] (https://arxiv.org/pdf/1310.4546.pdf), decided to train neural networks to play this game, and at the same time allowed the network to modify the vector representation of the words In order to succeed.  
+Linguists had a theory dubbed the [“distributional hypothesis”](https://en.wikipedia.org/wiki/Distributional_semantics#Distributional_hypothesis) which suggested that words are defined by the company that they keep. If I remove a _____ from a sentence, you can guess what it is (in this case ‘word’).  A group of [computer scientists] (https://arxiv.org/pdf/1310.4546.pdf), decided to train neural networks to play this game, and at the same time allowed the network to modify the vector representation of the words in order to succeed.  
 
-So, the neural network is fed a sentence from a text such as “The cat sat on the” and told the answer should be “mat”. The network first changes each word into *one-hot* vectors. This type of vector is a form of index, and is filled with N zeros, where N is the number of words in the entire vocabulary. The zero which corresponds to the desired word is flipped to a one. So, if my entire vocabulary was 3 words long and the sentence is “The cat sat” the one-hot vectors are:
+So, the neural network is fed a sentence from a text such as “the cat sat on the” and told the answer should be “mat”. The network first changes each word into *one-hot* vectors. This type of vector is a form of index, and is filled with N zeros, where N is the number of words in the entire vocabulary. The zero which corresponds to the desired word is flipped to a one. So, if my entire vocabulary was 3 words long and the sentence is “the cat sat” the one-hot vectors are:
 
 <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\bg_white&space;\large&space;\text{the}&space;&=&space;\begin{bmatrix}&space;0&space;\\&space;0&space;\\&space;1&space;\end{bmatrix},&space;\text{&space;cat}&space;&=&space;\begin{bmatrix}&space;0&space;\\&space;1&space;\\&space;0&space;\end{bmatrix}&space;\text{&space;sat}&space;&=&space;\begin{bmatrix}&space;1&space;\\&space;0&space;\\&space;0&space;\end{bmatrix}," title="\large \text{the} &= \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}, \text{ cat} &= \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \text{ sat} &= \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}," />
 
@@ -43,9 +43,9 @@ The new single vector representation – the hidden state, is then taken by the 
 
 *The network believes the next word is 10% likely to be "The", 30% likely to "Black" and 60% likely to be "Cat".*
 
-We train the model, so it’s allowed to change the word embedding layer to try improving it’s score.  In the example above we take the hidden state representation to be the corresponding vector for “mat”. This is useful because the vector representation of ‘mat’ depends purely on the words around it and the model must train to fit all other phrases which also predict "mat".
+We train the model, so it’s allowed to change the word embedding layer to try improving it’s score.  In the example above we take the hidden state representation to be the corresponding vector for “mat”. This is useful because the vector representation of "mat" depends purely on the words around it and the model must train to fit all other phrases which also predict "mat".
 
-When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (King/Queen, Man/Woman, Mr/Mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).
+When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (king/queen, man/woman, mr/mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).
 
 ![relations](/img/relations.png)
 
@@ -53,9 +53,9 @@ Finally, as vectors are well studied, we can do interesting things with them lik
 
 Rome + France — Paris = Italy
 
-King — man + woman = Queen
+king — man + woman = queen
 
-These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep a dictionary of the word embedding which knows which vector relates to which word. Then for more complicated for more difficult tasks (like translation), the neural networks can exploit these geometric relationships to complete its task quicker. For example, a network no longer needs to learn explicitly how to handle “Queen’— it just needs to learn “King”, “man” and “woman”, so one less input to stress about!
+These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep a dictionary of the word embedding which knows which vector relates to which word. Then for more complicated for more difficult tasks (like translation), the neural networks can exploit these geometric relationships to complete its task quicker. For example, a network no longer needs to learn explicitly how to handle “queen"— it just needs to learn “king”, “man” and “woman”, so one less input to stress about!
 
 These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep the first layer of the network (the word embedding) which knows which vector relates to which word and can use it for more difficult tasks (like translation).
 
