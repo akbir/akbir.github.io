@@ -232,3 +232,6 @@ sass:
 gems:
   - jekyll-paginate
   - jemoji
+
+# Google Analytics
+google_analytics: UA-59067982-2
