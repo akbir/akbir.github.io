@@ -50,14 +50,14 @@ background-img: "../img/intro.png"
 dynamic-typing: True
 shuffle: True # Shuffle the lines.
 loop: True
-loop-count: False # Set False for infinite loop, or set any number for finite loop.
+loop-count: 0 # Set False for infinite loop, or set any number for finite loop.
 type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "Proving Grad (student) Descent is Turing Complete"
+  - text: "Solving by Grad (student) Descent"
   - text: "Cause I'm cooler than a polar bear's toenails"
-  - text: "Couldn't afford the car so she named her daughter Alexis"
+
 
 me-img: "/img/profile.png"
 
@@ -117,7 +117,7 @@ email-share: True
 fb-share: True
 twitter-share: True
 linkedin-share: True
-reddit-share: True
+reddit-share: False
 google-plus-share: False
 tumblr-share: False
 pinterest-share: False
