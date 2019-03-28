@@ -47,7 +47,7 @@ background-img: "../img/intro.png"
 # Dynamic Text on the Header #
 ##############################
 
-dynamic-typing: True
+dynamic-typing: False
 shuffle: True # Shuffle the lines.
 loop: True
 loop-count: 0 # Set False for infinite loop, or set any number for finite loop.
@@ -55,8 +55,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "Solving by Grad (student) Descent"
-  - text: "Cause I'm cooler than a polar bear's toenails"
+  - text: ""
 
 
 me-img: "/img/profile.png"
