@@ -85,7 +85,7 @@ me-img: "/img/profile.png"
 # Color the browser elements #
 ##############################
 color-browser: "#000000"
-apple-status-bar-style: "black"
+apple-status-bar-style: "orange"
 
 ################
 # Web app mode #
