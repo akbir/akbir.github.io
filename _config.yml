@@ -55,7 +55,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "Cause I'm cooler than a polar bear's toenails"
+  - text: "Cause I'm Cooler Than a Polar Bear's Toenails"
 
 
 me-img: "/img/profile.png"
