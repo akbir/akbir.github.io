@@ -39,7 +39,7 @@ favicon: "/img/favicon.ico"
 # Header layout #
 ################
 
-black-favicon: "/img/black-lab-glass.ico"
+black-favicon: ""
 
 background-img: "../img/paris.png"
 
@@ -47,7 +47,7 @@ background-img: "../img/paris.png"
 # Dynamic Text on the Header #
 ##############################
 
-dynamic-typing: True
+dynamic-typing: False
 shuffle: True # Shuffle the lines.
 loop: False
 loop-count: 0 # Set False for infinite loop, or set any number for finite loop.
@@ -106,14 +106,14 @@ icon-192p: "/img/web-app/icon-192p.png"
 # Blog #
 ########
 
-enable-gesture-navigation: True
+enable-gesture-navigation: False
 
 post-preview-words: 96
 
 paginate: 5
 
-email-share: True
-fb-share: True
+email-share: False
+fb-share: False
 twitter-share: True
 linkedin-share: True
 reddit-share: False
@@ -170,7 +170,7 @@ email: "akbir.94@gmail.com"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: Akbir M Khan is a research engineer who likes to explore exciting AI technology. He blogs (mainly) as he dabbles with data, social justice,  NLP, and machine learning. All opinions and views are my own and do not represent my employer."
+author_blurb: Akbir M Khan is a research engineer and tech entrepreneur "
 author_blurb_image: "/img/author.png"
 
 ##################
@@ -178,22 +178,22 @@ author_blurb_image: "/img/author.png"
 ##################
 
 social:
-  - title: "facebook"
-    url: "https://facebook.com/"
+  # - title: "facebook"
+  #   url: "https://facebook.com/"
   - title: "twitter"
     url: "https://twitter.com/akbirkhan"
   - title: "github"
     url: "https://github.com/am-khan"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
-  - title: "rss"
-    url: "/feed.xml"
+  # - title: "bitcoin"
+  #   url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+  # - title: "rss"
+  #   url: "/feed.xml"
 
 ############
 # 404 page #
 ############
 
-err-404-img: "/img/labtocat.png"
+err-404-img: "/img/default.png"
 
 ##################
 # GPG on Keybase #
