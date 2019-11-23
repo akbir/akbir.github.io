@@ -33,7 +33,7 @@ author: "Akbir M Khan"
 title: "Akbir M Khan"
 description: "Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 keywords: "khan, akbir, personal, machinelearning, resume, akbir.94,"
-favicon: "/img/favicon.ico"
+favicon: ""
 
 ################
 # Header layout #
@@ -170,8 +170,8 @@ email: "akbir.94@gmail.com"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: Akbir M Khan is a research engineer and tech entrepreneur "
-author_blurb_image: "/img/author.png"
+author_blurb:
+author_blurb_image: "/img/profile.png"
 
 ##################
 # Social Buttons #
