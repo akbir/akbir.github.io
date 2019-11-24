@@ -41,7 +41,7 @@ favicon: ""
 
 black-favicon: ""
 
-background-img: "../img/paris.png"
+background-img: "../img/paris-min.png"
 
 ##############################
 # Dynamic Text on the Header #
