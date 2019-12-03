@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: 'How to Test Deep Learning'
-category: Book Summary
+category: tech
 tags: [ 'Software Development', 'Machine Learning' ]
 ---
 
