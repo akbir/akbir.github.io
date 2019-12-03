@@ -51,7 +51,7 @@ Okay let’s say we have Alice and Bob, actually fuck that, let’s call them Ab
 
 We need to give them an entangled qubit, let’s imagine we have the first Bell state (Eq. 1 above). Abdul and Bushra then take half of the entangled state each, (for simplicity Abdul takes A and Bushra takes B). Now the fun begins:
 
-1. Abdul then entangles his message C with his half of the entangled state.
+1.Abdul then entangles his message C with his half of the entangled state.
 
 ![The Entangled State with Abduls extra “message” qubit entangled, notice how it’s broken some fundamentally symmetry that the maximally entangled Bell state had.](/img/qc_entangled.png)
 
@@ -61,13 +61,13 @@ To understand what this does, lets ditch expressing our state in terms of the su
 
 From this expression, we can see that a measuring the qubit to see which Bell state it is in, results in four possibilities each with a probability of 1/4 of occurring.
 
-2. Abdul makes his measurement, in particular he measures exactly using the Bell states from above, resulting in one of the 4 outcomes below (which he has the information of).
+2.Abdul makes his measurement, in particular he measures exactly using the Bell states from above, resulting in one of the 4 outcomes below (which he has the information of).
 
 ![The four possible outcomes after Abdul makes his measurement, he’ll known which Bellman state he has received.](/img/qc_output.png)
 
 Most importantly look at what Bushra’s qubit now looks like, it has amplitudes relating to the alpha and beta which Abdul was trying to send!
 
-3. Abdul then sends the outcome of his measurement, by classical means, to Bushra. Bushra now has to do something depending on what Abdul has observed:
+3.Abdul then sends the outcome of his measurement, by classical means, to Bushra. Bushra now has to do something depending on what Abdul has observed:
 
 If Abdul observed the first Bell state, then Bushra’s qubit is already in the form of C. If Abdul observed any of the other states, we need to perform a simple qubit transformation, all which can be easily applied on a quantum circuit, by the unitary Pauli operations, to transform the state to being correct.
 
