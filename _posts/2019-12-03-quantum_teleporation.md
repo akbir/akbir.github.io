@@ -9,7 +9,7 @@ tags: [ 'physics', 'research' ]
 *Twice in the past week i’ve been asked to explain Quantum Teleportation (QT), firstly at a talk given at a research house and secondly by my tutee. I ended up asking myself plenty of questions as they went by and below wanted to write a concise explanation.*
 
 
-## Teleportation Doesn’t Really Mean What You think
+## Teleportation Doesn’t Really Mean What You Think
 
 Quantum teleportation is a protocol for how we can communicate information with entangled quantum states. It has very little to do with our science fiction idea of teleportation — where matter seemingly hops through space and time. Quantum teleportation concerns itself with how to send a quantum state from one person to another without physically exchanging anything.
 
