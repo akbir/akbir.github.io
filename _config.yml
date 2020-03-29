@@ -114,8 +114,8 @@ paginate: 5
 
 email-share: False
 fb-share: False
-twitter-share: True
-linkedin-share: True
+twitter-share: False
+linkedin-share: False
 reddit-share: False
 google-plus-share: False
 tumblr-share: False
@@ -123,7 +123,7 @@ pinterest-share: False
 pocket-share: False
 vkontakte-share: False
 
-disqus-shortname: "panossakkos"
+# disqus-shortname: "panossakkos"
 
 syntax-highlight: True
 
