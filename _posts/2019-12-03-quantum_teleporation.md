@@ -25,7 +25,7 @@ So if we have a particle, which could technically be in either state with certai
 
 ![The quantum state which depending on the measurement made, can be in either the up-state or the down-state](/img/linear_superposition.png)
 
-In which the quantum system is in the up-state, with |a|² probability and in down-state with probability|b|².
+In which the quantum system is in the up-state, with \|a\|² probability and in down-state with probability \|b\|².
 
 ## Okay cool, so how do I get me some of that Entanglement?
 
