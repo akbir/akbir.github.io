@@ -1,14 +1,10 @@
 ---
 layout: post
 section-type: post
-title: Representation Learning - Word2Vec
-category: long
+title: Understanding Word2Vec
+category: long post
 tags:
 ---
-
-
-So, in this blog we’re going to talk about “representation learning” which is an important part of Machine learning and AI in general.  
-
 As powerful as computers have become they are still relatively "stupid". In fact, computing *power* normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like "can you notice pedestrians in a photo" or "can you realise how the words 'king' and 'queen' are related"?
 
 What computers really get is vectors, they love them. By considering vectors as an array (list) of numbers, computers are able to still perform super simple and quick calculations. In addition, vectors already have some hardcore fans, who got obsessed with them through this niche subject called "Geometry". These guys have come from as far as India and Greece and considered lots of ways to tell how similar vectors are (mathematicians would call these metrics).

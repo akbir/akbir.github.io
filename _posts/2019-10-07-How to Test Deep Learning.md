@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: 'How to Test Deep Learning'
-category: short
+category: short post
 tags:
 ---
 
