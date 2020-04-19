@@ -2,8 +2,8 @@
 layout: post
 section-type: post
 title: Representation Learning - Word2Vec
-category: Intro to Machine Learning
-tags: [ 'word2vec', 'NLP', 'representation learning' ]
+category: long
+tags:
 ---
 
 
