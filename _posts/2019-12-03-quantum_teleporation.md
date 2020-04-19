@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Quantum Teleportation
-category: long
+category: long post
 tags:
 ---
 

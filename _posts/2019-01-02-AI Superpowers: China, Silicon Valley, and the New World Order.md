@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: 'AI Superpowers: China, Silicon Valley, and the New World Order'
-category: short
+category: short post
 tags:
 ---
 
