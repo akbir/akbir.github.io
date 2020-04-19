@@ -2,8 +2,8 @@
 layout: post
 section-type: post
 title: 'AI Superpowers: China, Silicon Valley, and the New World Order'
-category: Book Summary
-tags: [ 'AI Safety', 'Policy' ]
+category: short
+tags:
 ---
 
 *Following on from advice from a [flatmate](http://thinkingcomplete.blogspot.com/), I’ve decided I’ll be writing summaries of books I’ve just read — hopefully to flush out some of their ideas within my head.*

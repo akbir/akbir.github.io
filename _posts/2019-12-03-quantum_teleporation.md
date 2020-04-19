@@ -2,8 +2,8 @@
 layout: post
 section-type: post
 title: Quantum Teleportation
-category: tech
-tags: [ 'physics', 'research' ]
+category: long
+tags:
 ---
 
 *Twice in the past week i’ve been asked to explain Quantum Teleportation (QT), firstly at a talk given at a research house and secondly by my tutee. I ended up asking myself plenty of questions as they went by and below wanted to write a concise explanation.*

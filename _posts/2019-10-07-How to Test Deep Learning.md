@@ -2,8 +2,8 @@
 layout: post
 section-type: post
 title: 'How to Test Deep Learning'
-category: tech
-tags: [ 'Software Development', 'Machine Learning' ]
+category: short
+tags:
 ---
 
 *One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.*
