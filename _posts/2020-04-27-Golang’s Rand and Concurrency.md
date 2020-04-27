@@ -15,7 +15,7 @@ When rendering the image, we iterate through each position and call the sample m
 
 <script src="https://gist.github.com/am-khan/2940ff0137aadd7c533fe326b70e855b.js"></script>
 
-Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the `k`-th thread would calculate the [k, 2k, ... , nk] position pixels within the row.
+Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the `k`-th thread would calculate the `[k, 2k, ... , nk]`-th position pixels within the row.
 
 <script src="https://gist.github.com/am-khan/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
 
