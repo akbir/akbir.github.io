@@ -1,0 +1,47 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Akbir Khan"
+theme = "hugo-theme-basic"
+enableEmoji = true
+copyright = "© 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>."
+description = "Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[params]
+  titleEmoji = ":rocket:"
+  # change this!
+  twitter = "akbirkhan"
+
+[Permalinks]
+  post = "post/:slug"
+
+[[params.menu]]
+  name = "blog"
+  url = "post/"
+
+[[params.menu]]
+  name = "spotify"
+  url = "https://open.spotify.com/user/akbir?si=uMCQZ-miSwKED_YTucb3fQ"
+
+[[params.menu]]
+  name = "twitter"
+  url = "https://twitter.com/akbirkhan"
+
+[[params.menu]]
+  name = "about"
+  url = "about/"
+
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
