@@ -1,10 +1,11 @@
-baseURL = "http://example.org/"
+baseURL = "http://am-khan.github.io"
 languageCode = "en-us"
 title = "Akbir Khan"
 theme = "hugo-theme-basic"
 enableEmoji = true
 copyright = "© 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>."
 description = "Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+googleAnalytics = "UA-59067982-2"
 
 [taxonomies]
   category = "categories"
