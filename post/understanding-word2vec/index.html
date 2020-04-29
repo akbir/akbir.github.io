@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Understanding Word2Vec" />
+<meta property="og:site_name" content="Akbir Khan" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="http://am-khan.github.io/post/understanding-word2vec/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2018-08-09
+" /> <meta property="article:modified_time" content="2018-08-09
+" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@akbirkhan" />
+<meta name="twitter:creator" content="@akbirkhan" />
+<meta
+  name="twitter:title"
+  content="Understanding Word2Vec | Akbir Khan"
+/>
+<meta
+  name="twitter:description"
+  content="As powerful as computers have become they are still relatively &ldquo;stupid&rdquo;. In fact, computing power normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like &ldquo;can you notice pedestrians in a photo&rdquo; or &ldquo;can you realise how the words &lsquo;king&rsquo; and &lsquo;queen&rsquo; are related&rdquo;?
+What computers really get is vectors, they love them.|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="http://am-khan.github.io/post/understanding-word2vec/" />
+
+
+
+    <title>Understanding Word2Vec</title>
+    <link rel="canonical" href="http://am-khan.github.io/post/understanding-word2vec/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="http://am-khan.github.iocss/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-59067982-2', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="http://am-khan.github.io" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Understanding Word2Vec</h1>
+    <span class="f6 gray">August 9, 2018</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>As powerful as computers have become they are still relatively &ldquo;stupid&rdquo;. In fact, computing <em>power</em> normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like &ldquo;can you notice pedestrians in a photo&rdquo; or &ldquo;can you realise how the words &lsquo;king&rsquo; and &lsquo;queen&rsquo; are related&rdquo;?</p>
+<p>What computers really get is vectors, they love them. By considering vectors as an array (list) of numbers, computers are able to still perform super simple and quick calculations. In addition, vectors already have some hardcore fans, who got obsessed with them through this niche subject called &ldquo;Geometry&rdquo;. These guys have come from as far as India and Greece and considered lots of ways to tell how similar vectors are (mathematicians would call these metrics).</p>
+<p>We skip the work they’ve done because you probably learnt it in your Maths class. It’s the intuitive stuff such as &ldquo;the distance between two points&rdquo; and &ldquo;the angle between two vectors&rdquo; - different ways to measure how similar two vectors are. Depending on our choice of the two vectors, we could make these two measurements very different and, in that process, highlight different <em>relationships</em> between whatever those vectors represent.</p>
+<p>So, the approach that people considered is using vectors to represent abstract concepts, such as “pedestrians in a photo” or words such as “queen”. That way we can still compute things quickly, but the geometric properties between vectors can encode information. If the mitochondrion was the powerhouse of the cell, then the vector is the powerhouse of representation learning.</p>
+<p>Below we discuss one of my favourite examples of representation learning – Word2Vec.</p>
+<h3 id="word2vec">Word2Vec</h3>
+<p>Within Natural Language Processing, focus has been on producing robust representations of words. Telling a computer “Tom sat on the chair” and then asking, “Where is Tom?” is relatively difficult for a computer, as it requires an understanding of Tom as an object/noun and the relationship that the verb “sat” implies.</p>
+<p>Computers need some way to represent a word. In particular, Neural Networks (which do most of the work) need <em>continuous</em> representations. Think of <em>continuous</em> as meaning “not in chunks”, if something is <em>continuous</em> then there are no gaps between any two points (e.g in the flow of water). On the otherhand words are <em>discrete</em>, they literally are separate tokens, and between things like “cat” and “dog” there is no intermediate concept.</p>
+<p>Linguists had a theory dubbed the <a href="https://en.wikipedia.org/wiki/Distributional_semantics#Distributional_hypothesis">“distributional hypothesis”</a> which suggested that words are defined by the company that they keep. If I remove a _____ from a sentence, you can guess what it is (in this case ‘word’).  A group of [computer scientists] (<a href="https://arxiv.org/pdf/1310.4546.pdf),">https://arxiv.org/pdf/1310.4546.pdf),</a> decided to train neural networks to play this game, and at the same time allowed the network to modify the vector representation of the words in order to succeed.</p>
+<p>So, the neural network is fed a sentence from a text such as “the cat sat on the” and told the answer should be “mat”. The network first changes each word into a <em>one-hot</em> vector. This type of vector is a form of index, and is filled with N zeros, where N is the number of words in the entire vocabulary of the text. The zero which corresponds to the desired word is flipped to a one. So, if my entire vocabulary was 3 words long and the sentence is “the cat sat” the one-hot vectors are:</p>
+<p><!-- raw HTML omitted --></p>
+<p>The biggest hold back is that for a large text, these vectors are pretty huge, and we’d like our representations to be a bit more <em>informationally</em> dense, so you can use fewer numbers to express more information about the entity.</p>
+<p><img src="/img/word2vec.png" alt="neural network diagram"></p>
+<p>So, the first layer of the neural network takes the large one-hot vectors of a phrase and adds them together, creating an N-hot vector (which has multiple ones in it).  This is then fed into the first section of the neural network which outputs a smaller vector representation (the hidden state). We call this the word <em>embedding</em> (and it’s the important part).</p>
+<p>The new single vector representation – the hidden state, is then taken by the rest of the network to predict what the next word should be. The neural network tells us its belief by outputting a vector which contains, in each dimension, the probability that it is the corresponding word (we call this a Softmax classifier):</p>
+<p><!-- raw HTML omitted --></p>
+<p><em>The network believes the next word is 10% likely to be &ldquo;The&rdquo;, 30% likely to &ldquo;Black&rdquo; and 60% likely to be &ldquo;Cat&rdquo;.</em></p>
+<p>We train the model, so it’s allowed to change the word embedding layer to try improving it’s score.  In the example above we take the hidden state representation to be the corresponding vector for “mat”. This is useful because the vector representation of &ldquo;mat&rdquo; depends purely on the words around it and the model must train to fit all other phrases which also predict &ldquo;mat&rdquo;.</p>
+<p>When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (king/queen, man/woman, mr/mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).</p>
+<p><img src="/img/relations.png" alt="relations"></p>
+<p>Finally, as vectors are well studied, we can do interesting things with them like addition. This means that those relationships can be quantified as follows:</p>
+<p>Rome + France — Paris = Italy</p>
+<p>king — man + woman = queen</p>
+<p>These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep a dictionary of the word embedding which knows which vector relates to which word. Then for more difficult tasks (like translation), the neural networks can exploit these geometric relationships to complete its task quicker. For example, a network no longer needs to learn explicitly how to handle “queen&rdquo;— it just needs to learn “king”, “man” and “woman”, so one less input to stress about!</p>
+<p>These dense representations encode a lot of information. So, we try use these word representations for different tasks. We keep the first layer of the network (the word embedding) which knows which vector relates to which word and can use it for more difficult tasks (like translation).</p>
+<h4 id="limitations">Limitations</h4>
+<p>However, word2vec isn’t without limitations. The largest problem comes from how we calculate the phrases in the first place, which is done by addition. As addition is commutative, the order doesn’t matter. The phrase “Alice sat on the horse” and “the horse sat on Alice” have the same representation in the hidden state! Word ordering is a key component of syntax and language understanding. Secondly, it’s not clear in a text when a phrase stops, should we consider only “The cat sat on the table” or should we consider the phrase “The cat sat on the table whilst the dog growled”.</p>
+<p>I’ll discuss in the follow up blog how we can tackle these issues.</p>
+<p><em>This blog is part of a larger series which is also posted for Spherical Defence Labs, you can find out more about them guys</em> <a href="http://sphericaldefence.com/"><em>here.</em></a></p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: August 9, 2018. Published at: 2018-08-09.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        © 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
