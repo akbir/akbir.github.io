@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="Golang&#39;s Rand and Concurrency" />
+<meta property="og:site_name" content="Akbir Khan" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="http://am-khan.github.io/post/golangs-rand-and-concurrency/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2020-04-27
+" /> <meta property="article:modified_time" content="2020-04-27
+" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@akbirkhan" />
+<meta name="twitter:creator" content="@akbirkhan" />
+<meta
+  name="twitter:title"
+  content="Golang&#39;s Rand and Concurrency | Akbir Khan"
+/>
+<meta
+  name="twitter:description"
+  content="This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
+The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
+ Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="http://am-khan.github.io/post/golangs-rand-and-concurrency/" />
+
+
+
+    <title>Golang&#39;s Rand and Concurrency</title>
+    <link rel="canonical" href="http://am-khan.github.io/post/golangs-rand-and-concurrency/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="http://am-khan.github.iocss/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-59067982-2', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="http://am-khan.github.io" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">Golang&#39;s Rand and Concurrency</h1>
+    <span class="f6 gray">April 27, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.</p>
+<h3 id="the-idea">The Idea</h3>
+<p>When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect.
+When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:</p>
+<script type="application/javascript" src="https://gist.github.com/am-khan/2940ff0137aadd7c533fe326b70e855b.js"></script>
+
+<p>Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the <code>k</code>-th thread would calculate the <code>[k, 2k, ... , nk]</code>-th position pixels within the row.</p>
+<script type="application/javascript" src="https://gist.github.com/am-khan/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
+
+<p>Now lets check the runtimes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Single Thread</span>
+Elapsed: 1m54.230536119s
+<span style="color:#75715e"># Multiple Threads</span>
+Elapsed: 4m13.680876913s
+</code></pre></div><p>Unfortunately this didn’t speed things up, even worse, it increased the runtime!</p>
+<h3 id="the-bug">The Bug</h3>
+<p>If threading was making my program slower, then each thread was clearly unable to act independently. So lets check out sample method:</p>
+<script type="application/javascript" src="https://gist.github.com/am-khan/4ae37cc5edbee98ac52ef0c066c2bdd9.js"></script>
+
+<p>After some debugging (shout out <code>pprof</code>), I noticed that an incredible amount of time was being used by <code>math/rand</code> and the associated synchronisation overhead. Taking a quick look at the <a href="https://golang.org/src/math/rand/rand.go">source code</a>, I notice that the package is globally locked:</p>
+<!-- raw HTML omitted -->
+<p>For random number generators (RNGs) this makes perfect sense, as RNGs generally calculate the next random number based on the previous, and we’d like RNG to be consistently random across processes. This is good behaviour — however not ideal in our situation.</p>
+<h3 id="the-fix">The Fix</h3>
+<p>To circumvent this issue and gain all the speed benefits of threading, we’d need to provide each thread its own RNG. Thankfully this is fairly simple within go, as the rand package has methods to create unique RNGs, which can be created for each thread independently.
+<script type="application/javascript" src="https://gist.github.com/am-khan/cc1c9d0c8260ce5e104f0fdbfaaeb7d8.js"></script>
+</p>
+<p>and subsequently update all the existing math/rand calls must be switched to call our RNG instead:
+<script type="application/javascript" src="https://gist.github.com/am-khan/c6ad8ef81ad781d025a5b7b741ca9ca7.js"></script>
+</p>
+<h3 id="the-results">The Results</h3>
+<p>After some tuning of the number of threads to use (as suggested by a friend 2*NumCores), my final speed up was:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Multiple Threads</span>
+Elapsed: 23.765684225s
+</code></pre></div><p>which was a nice 4x speed up!</p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: April 27, 2020. Published at: 2020-04-27.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        © 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
