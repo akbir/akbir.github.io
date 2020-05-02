@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>5 Year Manifesto</title>
+      <link>http://am-khan.github.io/post/5-year-manifesto/</link>
+      <pubDate>Fri, 01 May 2020 21:35:13 +0100</pubDate>
+      
+      <guid>http://am-khan.github.io/post/5-year-manifesto/</guid>
+      <description>For a couple of my peers and myself, covid-19 has provided a time for some introspection and with that the existential regret that we don’t really know what we’re doing here. 2 years into my career, I’ve decided to consolidate what my goals are for the next five years.
+Be Kinder To People I’ve only been working for 2 years, but it’s becoming more and more clear, that being kind to people really pays off.</description>
+    </item>
+    
+    <item>
       <title>Golang&#39;s Rand and Concurrency</title>
       <link>http://am-khan.github.io/post/golangs-rand-and-concurrency/</link>
       <pubDate>Mon, 27 Apr 2020 16:12:40 +0100</pubDate>

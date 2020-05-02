@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://am-khan.github.io/post/golangs-rand-and-concurrency/</loc>
-    <lastmod>2020-04-27T16:12:40+01:00</lastmod>
+    <loc>http://am-khan.github.io/post/5-year-manifesto/</loc>
+    <lastmod>2020-05-01T21:35:13+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://am-khan.github.io/post/</loc>
+    <lastmod>2020-05-01T21:35:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://am-khan.github.io/post/golangs-rand-and-concurrency/</loc>
     <lastmod>2020-04-27T16:12:40+01:00</lastmod>
   </url>
   
