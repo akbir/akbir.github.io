@@ -53,6 +53,32 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
 <meta name="twitter:domain" content="http://am-khan.github.io/post/golangs-rand-and-concurrency/" />
 
 
+    <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/am-khan.github.io"
+    },
+    "articleSection" : "post",
+    "name" : "Golang\x27s Rand and Concurrency",
+    "headline" : "Golang\x27s Rand and Concurrency",
+    "description" : "This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.\nThe Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:\n Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-27 16:12:40 \x2b0100 BST",
+    "dateModified" : "2020-04-27 16:12:40 \x2b0100 BST",
+    "url" : "http:\/\/am-khan.github.io\/post\/golangs-rand-and-concurrency\/",
+    "wordCount" : "333",
+    "keywords" : [ "Blog" ]
+}
+</script>
 
     <title>Golang&#39;s Rand and Concurrency</title>
     <link rel="canonical" href="http://am-khan.github.io/post/golangs-rand-and-concurrency/" />
@@ -93,10 +119,9 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://am-khan.github.io/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://am-khan.github.io/apple-touch-icon.png" />
   </head>
-
 
 <body
   lang="en-us"
@@ -108,7 +133,7 @@ if (!doNotTrack) {
   <span class="b">/ </span>
   <a href="http://am-khan.github.io" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
   <span class="b"> / </span>
-  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+  <a href="http://am-khan.github.io/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">Golang&#39;s Rand and Concurrency</h1>
@@ -164,7 +189,7 @@ Elapsed: 23.765684225s
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>.
+        
       </p>
     </div>
   </footer>
