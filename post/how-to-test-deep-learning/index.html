@@ -52,6 +52,32 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
 <meta name="twitter:domain" content="http://am-khan.github.io/post/how-to-test-deep-learning/" />
 
 
+    <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/am-khan.github.io"
+    },
+    "articleSection" : "post",
+    "name" : "How to Test Deep Learning",
+    "headline" : "How to Test Deep Learning",
+    "description" : "One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.\nIn particular, our product utilised \x26ldquo;online learning’’, in which each model is trained specifically for a client.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-07 16:12:40 \x2b0100 BST",
+    "dateModified" : "2019-10-07 16:12:40 \x2b0100 BST",
+    "url" : "http:\/\/am-khan.github.io\/post\/how-to-test-deep-learning\/",
+    "wordCount" : "1157",
+    "keywords" : [ "Blog" ]
+}
+</script>
 
     <title>How to Test Deep Learning</title>
     <link rel="canonical" href="http://am-khan.github.io/post/how-to-test-deep-learning/" />
@@ -92,10 +118,9 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://am-khan.github.io/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://am-khan.github.io/apple-touch-icon.png" />
   </head>
-
 
 <body
   lang="en-us"
@@ -107,7 +132,7 @@ if (!doNotTrack) {
   <span class="b">/ </span>
   <a href="http://am-khan.github.io" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
   <span class="b"> / </span>
-  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+  <a href="http://am-khan.github.io/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">How to Test Deep Learning</h1>
@@ -121,7 +146,7 @@ if (!doNotTrack) {
 <p>Testing is the backbone of any good software project, it is the fundamental way to maintain code. Traditionally it can be broken down into 4 tiers, each abstracting and working on a larger scope than the previous — for deep learning we particularly focus upon on the first two (Unit and Integration).</p>
 <p>Unit testing evaluates code at its component level, where actual outputs are compared with expected outputs. For deep learning this is interrupted as the individual layers (e.g linear, conv layer) to small modules (e.g your custom string-encoders). Whilst the prior are normally well tested by the PyTorch and TF library, the latter provides difficulties.</p>
 <p>Integration testing evaluates the orchestrated performance of components of code together — checking interfaces match and the correct data is being sent between them. In machine learning, we consider this tasks such as Training and Inference. Inherently these tasks involve engagement between your data processing, training mechanisms and deployment, and at each stage, biases can introduced it.</p>
-<p><img src="/img/testing_stages.png" alt="testing framework"></p>
+<p><img src="http://am-khan.github.io/img/testing_stages.png" alt="testing framework"></p>
 <h3 id="why-it-fails-for-deep-learning">Why it Fails for Deep Learning</h3>
 <p>Some of our pet peeves on why this framing fails:</p>
 <p>Maths is boring. Calculating tensor multiplications are difficult — and rarely can be done by an engineer as ‘‘back of the envelope calculations’’. The maths is fiddly — even with fixed seed initialisation, the regular Xavier weight initialisation uses 32-bit floats, matrix multiplication involves a large series of calculations and testing modules with batching involves hard-coding tensors with 3 dimensions. Whilst none of these tasks are insurmountable- they massively stifle development time and creating useful unit tests.</p>
@@ -157,7 +182,7 @@ if (!doNotTrack) {
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>.
+        
       </p>
     </div>
   </footer>

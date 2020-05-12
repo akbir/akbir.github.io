@@ -52,6 +52,32 @@ What computers really get is vectors, they love them.|"
 <meta name="twitter:domain" content="http://am-khan.github.io/post/understanding-word2vec/" />
 
 
+    <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/am-khan.github.io"
+    },
+    "articleSection" : "post",
+    "name" : "Understanding Word2Vec",
+    "headline" : "Understanding Word2Vec",
+    "description" : "As powerful as computers have become they are still relatively \x26ldquo;stupid\x26rdquo;. In fact, computing power normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like \x26ldquo;can you notice pedestrians in a photo\x26rdquo; or \x26ldquo;can you realise how the words \x26lsquo;king\x26rsquo; and \x26lsquo;queen\x26rsquo; are related\x26rdquo;?\nWhat computers really get is vectors, they love them.",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-09 16:12:40 \x2b0100 BST",
+    "dateModified" : "2018-08-09 16:12:40 \x2b0100 BST",
+    "url" : "http:\/\/am-khan.github.io\/post\/understanding-word2vec\/",
+    "wordCount" : "1189",
+    "keywords" : [ "Blog" ]
+}
+</script>
 
     <title>Understanding Word2Vec</title>
     <link rel="canonical" href="http://am-khan.github.io/post/understanding-word2vec/" />
@@ -92,10 +118,9 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://am-khan.github.io/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://am-khan.github.io/apple-touch-icon.png" />
   </head>
-
 
 <body
   lang="en-us"
@@ -107,7 +132,7 @@ if (!doNotTrack) {
   <span class="b">/ </span>
   <a href="http://am-khan.github.io" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
   <span class="b"> / </span>
-  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+  <a href="http://am-khan.github.io/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">Understanding Word2Vec</h1>
@@ -126,14 +151,14 @@ if (!doNotTrack) {
 <p>So, the neural network is fed a sentence from a text such as “the cat sat on the” and told the answer should be “mat”. The network first changes each word into a <em>one-hot</em> vector. This type of vector is a form of index, and is filled with N zeros, where N is the number of words in the entire vocabulary of the text. The zero which corresponds to the desired word is flipped to a one. So, if my entire vocabulary was 3 words long and the sentence is “the cat sat” the one-hot vectors are:</p>
 <p><!-- raw HTML omitted --></p>
 <p>The biggest hold back is that for a large text, these vectors are pretty huge, and we’d like our representations to be a bit more <em>informationally</em> dense, so you can use fewer numbers to express more information about the entity.</p>
-<p><img src="/img/word2vec.png" alt="neural network diagram"></p>
+<p><img src="http://am-khan.github.io/img/word2vec.png" alt="neural network diagram"></p>
 <p>So, the first layer of the neural network takes the large one-hot vectors of a phrase and adds them together, creating an N-hot vector (which has multiple ones in it).  This is then fed into the first section of the neural network which outputs a smaller vector representation (the hidden state). We call this the word <em>embedding</em> (and it’s the important part).</p>
 <p>The new single vector representation – the hidden state, is then taken by the rest of the network to predict what the next word should be. The neural network tells us its belief by outputting a vector which contains, in each dimension, the probability that it is the corresponding word (we call this a Softmax classifier):</p>
 <p><!-- raw HTML omitted --></p>
 <p><em>The network believes the next word is 10% likely to be &ldquo;The&rdquo;, 30% likely to &ldquo;Black&rdquo; and 60% likely to be &ldquo;Cat&rdquo;.</em></p>
 <p>We train the model, so it’s allowed to change the word embedding layer to try improving it’s score.  In the example above we take the hidden state representation to be the corresponding vector for “mat”. This is useful because the vector representation of &ldquo;mat&rdquo; depends purely on the words around it and the model must train to fit all other phrases which also predict &ldquo;mat&rdquo;.</p>
 <p>When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (king/queen, man/woman, mr/mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).</p>
-<p><img src="/img/relations.png" alt="relations"></p>
+<p><img src="http://am-khan.github.io/img/relations.png" alt="relations"></p>
 <p>Finally, as vectors are well studied, we can do interesting things with them like addition. This means that those relationships can be quantified as follows:</p>
 <p>Rome + France — Paris = Italy</p>
 <p>king — man + woman = queen</p>
@@ -158,7 +183,7 @@ if (!doNotTrack) {
   <footer>
     <div>
       <p class="f6 gray mt6 lh-copy">
-        © 2016-19 <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>. Made by <a href='https://twitter.com/siegerts'>@siegerts</a>.
+        
       </p>
     </div>
   </footer>
