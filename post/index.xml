@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Akbir Khan</title>
-    <link>http://am-khan.github.io/post/</link>
+    <link>https://am-khan.github.io/post/</link>
     <description>Recent content in Posts on Akbir Khan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 May 2020 21:35:13 +0100</lastBuildDate>
     
-	<atom:link href="http://am-khan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://am-khan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lessons From My First Job</title>
-      <link>http://am-khan.github.io/post/lessons-from-my-first-job/</link>
+      <link>https://am-khan.github.io/post/lessons-from-my-first-job/</link>
       <pubDate>Fri, 01 May 2020 21:35:13 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/lessons-from-my-first-job/</guid>
+      <guid>https://am-khan.github.io/post/lessons-from-my-first-job/</guid>
       <description>For a couple of my peers and myself, covid-19 has provided a time for some introspection and with that the existential regret that we don’t really know what we’re doing here. 2 years into my career, I’ve decided to consolidate what principles I&amp;rsquo;ve learnt for the next five years.
 Be Kinder To People I’ve only been working for 2 years, but it’s becoming more and more clear, that being kind to people really pays off.</description>
     </item>
     
     <item>
       <title>Golang&#39;s Rand and Concurrency</title>
-      <link>http://am-khan.github.io/post/golangs-rand-and-concurrency/</link>
+      <link>https://am-khan.github.io/post/golangs-rand-and-concurrency/</link>
       <pubDate>Mon, 27 Apr 2020 16:12:40 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/golangs-rand-and-concurrency/</guid>
+      <guid>https://am-khan.github.io/post/golangs-rand-and-concurrency/</guid>
       <description>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
 The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
  Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
@@ -34,40 +34,40 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
     
     <item>
       <title>Quantum Teleportation 101</title>
-      <link>http://am-khan.github.io/post/quantum-teleportation-101/</link>
+      <link>https://am-khan.github.io/post/quantum-teleportation-101/</link>
       <pubDate>Tue, 03 Dec 2019 16:12:40 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/quantum-teleportation-101/</guid>
+      <guid>https://am-khan.github.io/post/quantum-teleportation-101/</guid>
       <description>Twice in the past week i’ve been asked to explain Quantum Teleportation (QT), firstly at a talk given at a research house and secondly by my tutee. I ended up asking myself plenty of questions as they went by and below wanted to write a concise explanation.
 Teleportation Doesn’t Really Mean What You Think Quantum teleportation is a protocol for how we can communicate information with entangled quantum states. It has very little to do with our science fiction idea of teleportation — where matter seemingly hops through space and time.</description>
     </item>
     
     <item>
       <title>How to Test Deep Learning</title>
-      <link>http://am-khan.github.io/post/how-to-test-deep-learning/</link>
+      <link>https://am-khan.github.io/post/how-to-test-deep-learning/</link>
       <pubDate>Mon, 07 Oct 2019 16:12:40 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/how-to-test-deep-learning/</guid>
+      <guid>https://am-khan.github.io/post/how-to-test-deep-learning/</guid>
       <description>One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.
 In particular, our product utilised &amp;ldquo;online learning’’, in which each model is trained specifically for a client.</description>
     </item>
     
     <item>
       <title>AI Superpowers - Book Review</title>
-      <link>http://am-khan.github.io/post/ai-superpowers-book-review/</link>
+      <link>https://am-khan.github.io/post/ai-superpowers-book-review/</link>
       <pubDate>Wed, 02 Jan 2019 16:12:40 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/ai-superpowers-book-review/</guid>
+      <guid>https://am-khan.github.io/post/ai-superpowers-book-review/</guid>
       <description>Following on from advice from a flatmate, I’ve decided I’ll be writing summaries of books I’ve just read — hopefully to flush out some of their ideas within my head.
 Kai-Fu Lee is someone everyone should know more about. As a PhD student at Carnegie Mellon, Lee created the first speaker-independent continuous speech recognition system. As the second AI winter was settling in, Lee worked at companies such as Microsoft, Apple and even headed up Google China, witnessing the rise of Eastern and Western tech companies.</description>
     </item>
     
     <item>
       <title>Understanding Word2Vec</title>
-      <link>http://am-khan.github.io/post/understanding-word2vec/</link>
+      <link>https://am-khan.github.io/post/understanding-word2vec/</link>
       <pubDate>Thu, 09 Aug 2018 16:12:40 +0100</pubDate>
       
-      <guid>http://am-khan.github.io/post/understanding-word2vec/</guid>
+      <guid>https://am-khan.github.io/post/understanding-word2vec/</guid>
       <description>As powerful as computers have become they are still relatively &amp;ldquo;stupid&amp;rdquo;. In fact, computing power normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like &amp;ldquo;can you notice pedestrians in a photo&amp;rdquo; or &amp;ldquo;can you realise how the words &amp;lsquo;king&amp;rsquo; and &amp;lsquo;queen&amp;rsquo; are related&amp;rdquo;?
 What computers really get is vectors, they love them.</description>
     </item>
