@@ -25,7 +25,7 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="https://am-khan.github.io/post/how-to-test-deep-learning/" />
+<meta property="og:url" content="https://akbir.dev/post/how-to-test-deep-learning/" />
 <meta property="og:locale" content="en-us" />
 <meta property="article:published_time" content="2019-10-07
 " /> <meta property="article:modified_time" content="2019-10-07
@@ -49,7 +49,7 @@
 In particular, our product utilised &ldquo;online learning’’, in which each model is trained specifically for a client.|"
 />
 <meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="https://am-khan.github.io/post/how-to-test-deep-learning/" />
+<meta name="twitter:domain" content="https://akbir.dev/post/how-to-test-deep-learning/" />
 
 
     <script type="application/ld+json">
@@ -58,7 +58,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https:\/\/am-khan.github.io\/"
+         "@id": "https:\/\/akbir.dev\/"
     },
     "articleSection" : "post",
     "name" : "How to Test Deep Learning",
@@ -73,14 +73,14 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
     "copyrightYear" : "2019",
     "datePublished": "2019-10-07 16:12:40 \u002b0100 BST",
     "dateModified" : "2019-10-07 16:12:40 \u002b0100 BST",
-    "url" : "https:\/\/am-khan.github.io\/post\/how-to-test-deep-learning\/",
+    "url" : "https:\/\/akbir.dev\/post\/how-to-test-deep-learning\/",
     "wordCount" : "1157",
     "keywords" : [ "Blog" ]
 }
 </script>
 
     <title>How to Test Deep Learning</title>
-    <link rel="canonical" href="https://am-khan.github.io/post/how-to-test-deep-learning/" />
+    <link rel="canonical" href="https://akbir.dev/post/how-to-test-deep-learning/" />
 
 
     <link
@@ -88,7 +88,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
   href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
 />
 
-<link rel="stylesheet" href="https://am-khan.github.io/css/style.css" />
+<link rel="stylesheet" href="https://akbir.dev/css/style.css" />
 
 <link
   rel="stylesheet"
@@ -118,8 +118,8 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
-    <link rel="shortcut icon" href="https://am-khan.github.io/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="https://am-khan.github.io/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://akbir.dev/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://akbir.dev/apple-touch-icon.png" />
   </head>
 
 <body
@@ -130,9 +130,9 @@ if (!doNotTrack) {
 >
   
   <span class="b">/ </span>
-  <a href="https://am-khan.github.io/" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
+  <a href="https://akbir.dev/" class="b bb bw1 pb1 no-underline black">Akbir Khan</a>
   <span class="b"> / </span>
-  <a href="https://am-khan.github.io/post" class="b bb bw1 pb1 no-underline black">blog</a>
+  <a href="https://akbir.dev/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">How to Test Deep Learning</h1>
@@ -146,7 +146,7 @@ if (!doNotTrack) {
 <p>Testing is the backbone of any good software project, it is the fundamental way to maintain code. Traditionally it can be broken down into 4 tiers, each abstracting and working on a larger scope than the previous — for deep learning we particularly focus upon on the first two (Unit and Integration).</p>
 <p>Unit testing evaluates code at its component level, where actual outputs are compared with expected outputs. For deep learning this is interrupted as the individual layers (e.g linear, conv layer) to small modules (e.g your custom string-encoders). Whilst the prior are normally well tested by the PyTorch and TF library, the latter provides difficulties.</p>
 <p>Integration testing evaluates the orchestrated performance of components of code together — checking interfaces match and the correct data is being sent between them. In machine learning, we consider this tasks such as Training and Inference. Inherently these tasks involve engagement between your data processing, training mechanisms and deployment, and at each stage, biases can introduced it.</p>
-<p><img src="https://am-khan.github.io/img/testing_stages.png" alt="testing framework"></p>
+<p><img src="https://akbir.dev/img/testing_stages.png" alt="testing framework"></p>
 <h3 id="why-it-fails-for-deep-learning">Why it Fails for Deep Learning</h3>
 <p>Some of our pet peeves on why this framing fails:</p>
 <p>Maths is boring. Calculating tensor multiplications are difficult — and rarely can be done by an engineer as ‘‘back of the envelope calculations’’. The maths is fiddly — even with fixed seed initialisation, the regular Xavier weight initialisation uses 32-bit floats, matrix multiplication involves a large series of calculations and testing modules with batching involves hard-coding tensors with 3 dimensions. Whilst none of these tasks are insurmountable- they massively stifle development time and creating useful unit tests.</p>
