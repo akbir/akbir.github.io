@@ -43,11 +43,11 @@ Teleportation Doesn’t Really Mean What You Think Quantum teleportation is a pr
     </item>
     
     <item>
-      <title>How to Test Deep Learning</title>
-      <link>https://akbir.dev/post/how-to-test-deep-learning/</link>
+      <title>Production Deep Learning: Testing</title>
+      <link>https://akbir.dev/post/production-deep-learning-testing/</link>
       <pubDate>Mon, 07 Oct 2019 16:12:40 +0100</pubDate>
       
-      <guid>https://akbir.dev/post/how-to-test-deep-learning/</guid>
+      <guid>https://akbir.dev/post/production-deep-learning-testing/</guid>
       <description>One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.
 In particular, our product utilised &amp;ldquo;online learning’’, in which each model is trained specifically for a client.</description>
     </item>
