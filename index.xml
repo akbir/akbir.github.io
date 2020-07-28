@@ -53,11 +53,11 @@ Teleportation Doesn’t Really Mean What You Think Quantum teleportation is a pr
     </item>
     
     <item>
-      <title>Production Deep Learning: Testing</title>
-      <link>https://akbir.dev/post/production-deep-learning-testing/</link>
+      <title>Testing For Deep Learning</title>
+      <link>https://akbir.dev/post/testing-for-deep-learning/</link>
       <pubDate>Mon, 07 Oct 2019 16:12:40 +0100</pubDate>
       
-      <guid>https://akbir.dev/post/production-deep-learning-testing/</guid>
+      <guid>https://akbir.dev/post/testing-for-deep-learning/</guid>
       <description>One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.
 In particular, our product utilised &amp;ldquo;online learning’’, in which each model is trained specifically for a client.</description>
     </item>
@@ -88,7 +88,7 @@ What computers really get is vectors, they love them.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://akbir.dev/about/</guid>
-      <description>Hi I&amp;rsquo;m Akbir! I&amp;rsquo;m mostly a research engineer who cares about operationalising research to benefit people&amp;rsquo;s lives.
+      <description>Hi, I am Akbir! I&amp;rsquo;m mostly a research engineer who cares about operationalising research to benefit people&amp;rsquo;s lives.
 I&amp;rsquo;m obsessed with machine learning and its various subdomains including AI safety, robustness and security. I&amp;rsquo;m currently, the Chief Research Officer at Spherical Defence, a London based start-up, which uses deep learning to create intrusion detection systems. I mainly blog here as a form of Feynman test, on anything that takes my interest.</description>
     </item>
     
