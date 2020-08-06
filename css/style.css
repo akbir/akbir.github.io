@@ -28,3 +28,11 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+code.has-jax {
+  //https://geoffruddock.com/math-typesetting-in-hugo/
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}

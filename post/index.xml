@@ -5,7 +5,8 @@
     <link>https://akbir.dev/post/</link>
     <description>Recent content in Posts on Akbir Khan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-uk</language>
+    <copyright>© 2016-19 &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt;. Made by &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;@siegerts&lt;/a&gt;.</copyright>
     <lastBuildDate>Sat, 25 Jul 2020 17:38:55 +0100</lastBuildDate>
     
 	<atom:link href="https://akbir.dev/post/index.xml" rel="self" type="application/rss+xml" />
