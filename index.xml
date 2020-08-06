@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© 2016-19 &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt;. Made by &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;@siegerts&lt;/a&gt;.</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 17:38:55 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 17:48:55 +0100</lastBuildDate>
     
 	<atom:link href="https://akbir.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>History Through Optimisation</title>
+      <link>https://akbir.dev/post/history-through-optimisation/</link>
+      <pubDate>Wed, 05 Aug 2020 17:48:55 +0100</pubDate>
+      
+      <guid>https://akbir.dev/post/history-through-optimisation/</guid>
+      <description>Recently I’ve taken to framing events as quantity/optimisation pairs. This is the de-facto framework in machine learning and to evaluate its utility, I wanted to apply it to existing history. These ideas were firstly introduced to me by Eliezier and Richard.
+Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity.</description>
+    </item>
     
     <item>
       <title>Remembering Big Narstie</title>
