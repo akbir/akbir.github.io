@@ -82,7 +82,7 @@ Introduction All decision tasks (questions with Yes-No answers) can be framed as
     "datePublished": "2020-08-05 17:48:55 \u002b0100 BST",
     "dateModified" : "2020-08-05 17:48:55 \u002b0100 BST",
     "url" : "https:\/\/akbir.dev\/post\/history-through-optimisation\/",
-    "wordCount" : "5390",
+    "wordCount" : "5391",
     "keywords" : [ "Blog" ]
 }
 </script>
@@ -221,8 +221,8 @@ Firstly let&rsquo;s talk about comparative measurements (absolute references are
 <p>Let’s imagine we have a box of indistinguishable particles, at temperature T, each with their own velocity, and the speed of a randomly selected particle defines the configuration. Then we can describe a (Boltzmann) distribution over all possible configurations with a specific probabilistic weight, given by the Boltzman factor:</p>
 <p>$$p_i \propto e^{-\frac{e_i}{\kappa T}}$$</p>
 <p>This particular distribution (for velocities of particles in a gas) is called the Maxwell-Boltzmann Distribution. When we want to measure the state, we are simply sampling from an equivalent distribution. Thus the optimisation necessarily is random, it&rsquo;s pretty much up to chance what velocity we find particles in.</p>
-<figure>
-    <img src="maxwell_boltzmann.png" width="320"/> 
+<figure class="right-align">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Simulation_of_gas_for_relaxation_demonstration.gif" width="320"/> 
 </figure>
 
 <p>But wait you might be going &ldquo;But Akbir, my bedroom doesn&rsquo;t randomly sample everytime I look for where my chair is!&rdquo; And you&rsquo;re right, when looking at macroscopic properties (chair location), we end up taking the <em>Thermodynamic Limit</em>:</p>
@@ -309,12 +309,12 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>Entropy optimisation rarely goes wrong, and in those situations we get strange behaviour such as spin ice - which overtime is self correcting. When genes incorrectly optimise we get cancer cells - which whilst dangerous to individual genes are limited to the carrier. Culture can create harmful memes - the worst (such as nukes) are cause for existential risk not only to the optimisation of culture but also life. Markets when incorrectly modelled without perfect information can lead to wasteful allocation of resources can lead to wars, eradicating trust for markets, cultures and life. Each optimisation can go wrong - and with it we must appreciate that the impact of misaligned agents will be even more catastrophic.</p>
 <p><strong>Optimisers get faster at completing more difficult tasks:</strong></p>
 <p>This statement is much harder to quantify so let&rsquo;s just outline a sketch. Entropy evolution is a tediously slow process, with irreversible processes taking thousands of years to create simple structure. Genes on the other hand replicate exceptionally quickly making even more complex structures. Next, if we compare genetic evolution with cultural evolution, we find the largest difference is that genes use survival to evaluate fitness whilst memes require other people to imitate them to evaluate fitness. Thus, the optimisation step for genes is once a generation whilst for memes it is almost instantaneous. Equally by considering markets, the true values of a resource propagate almost instantaneously, to the point that market equilibrium shift so quickly that government intervention is required at times.</p>
-<p>The rigorous way to evaluate this is to consider how big the search space is which each optimiser must travel through. Further considerations also include how convex the surface is, for example both these surfaces have minimum at the same point, however it&rsquo;s much harder to find the minimum in the example on the right, even both are continuous functions.</p>
+<p>The rigorous way to evaluate this is to consider how big the search space is which each optimiser must travel through. Further considerations also include the nature of the surface, in terms of continuity and shape. For example, both surfaces shown below have minimum at the same point - however in the oscillatory example, its much harder to find the minimum.</p>
 <p><figure>
-    <img src="quadratic.png" width="250"/> 
+    <img src="quadratic.png" width="400"/> 
 </figure>
  <figure>
-    <img src="xsin%28x%29.png" width="250"/> 
+    <img src="xsin%28x%29.png" width="400"/> 
 </figure>
 </p>
 
