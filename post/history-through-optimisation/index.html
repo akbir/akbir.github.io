@@ -82,7 +82,7 @@ Introduction All decision tasks (questions with Yes-No answers) can be framed as
     "datePublished": "2020-08-05 17:48:55 \u002b0100 BST",
     "dateModified" : "2020-08-05 17:48:55 \u002b0100 BST",
     "url" : "https:\/\/akbir.dev\/post\/history-through-optimisation\/",
-    "wordCount" : "5391",
+    "wordCount" : "5494",
     "keywords" : [ "Blog" ]
 }
 </script>
@@ -222,14 +222,14 @@ Firstly let&rsquo;s talk about comparative measurements (absolute references are
 <p>$$p_i \propto e^{-\frac{e_i}{\kappa T}}$$</p>
 <p>This particular distribution (for velocities of particles in a gas) is called the Maxwell-Boltzmann Distribution. When we want to measure the state, we are simply sampling from an equivalent distribution. Thus the optimisation necessarily is random, it&rsquo;s pretty much up to chance what velocity we find particles in.</p>
 <figure class="right-align">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Simulation_of_gas_for_relaxation_demonstration.gif" width="320"/> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Simulation_of_gas_for_relaxation_demonstration.gif"/> 
 </figure>
 
 <p>But wait you might be going &ldquo;But Akbir, my bedroom doesn&rsquo;t randomly sample everytime I look for where my chair is!&rdquo; And you&rsquo;re right, when looking at macroscopic properties (chair location), we end up taking the <em>Thermodynamic Limit</em>:</p>
 <p>$$N \to \infty, V \to \infty, \frac{N}{V} = constant$$</p>
 <p>This transforms our nice distributions into sharp dirac-delta distributions where any sample we take ends up in a single position.</p>
 <figure>
-    <img src="dirac_delta.png" width="320"/> 
+    <img src="dirac_delta.png"/> 
 </figure>
 
 <p>But what about at the quantum scale? It turns out when you sample from a distribution (take a measurement), the state can collapse (transform) into another distribution or a fixed state (called an Eigenstate). So for physics, optimisation involves randomly sampling from a system until it eventually keeps giving the same answer (it has fallen into eigenstates which relate to high entropy). We can consider this a positive feedback loop - once you’ve collapsed into a fixed state, you continue to stay within it.</p>
@@ -266,7 +266,7 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>In the ideal situation with a fixed output and equally efficient workers, we should share the inputs equally. But in the situation where worker 1 is twice as efficient as worker 2, I should probably give more input resources to worker 2. What we want is for resource allocation to be Pareto optimal. This is just econ chat for saying - there exists no changes that could improve the output without reducing other variables. The optima isn’t unique, as we can imagine two completely different scenarios where the overall output is consistent - below is the equal efficiency case for worker 1 (X) and worker 2 (Y).</p>
 <figure>
     <img src="ppf.png"
-         alt="Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable." width="320"/> <figcaption>
+         alt="Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable."/> <figcaption>
             <p>Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable.</p>
         </figcaption>
 </figure>
@@ -293,7 +293,7 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>The very act of training a neural network is the optimisation. We search through the different values of each neuron such that the network performs better on a task. To do this search effectively we use multiple variants of an optimiser called back propagation. For a given error (or undesirable score) $y$, backprop calculates the gradients, $\frac{dy}{dw_t}$, of this score with respect to our weights at time $t$. Using this we know from the slope of $y = f(w)$, which is the network and so can move down this slope to reduce our error until this is zero. We can do this using loads of samples taking small steps for each data point, thus learning a general way to reduce the error.</p>
 <p><strong>Looking Forward</strong></p>
 <p>So is backprop the path to full blown artificial general intelligence (AGI)? I think our most promising mechanism to reach AGI is iterative amplification. Amplification is when we set agents the tasks of building smarter agents, who in turn build even smarter agents. For a full treatment of how this works (and how to mitigate any associated risk) check out Paul Christiano’s <a href="https://www.jstor.org/stable/1879431?seq=1">blog</a>.</p>
-<p>I find this most compelling approach, as it falls into my world view  - where we optimise until we find a new more efficient optimiser. Let&rsquo;s look at the evidence that this works. Currently as researchers we push machine learning forward under four approaches:</p>
+<p>This a compelling approach, as it falls into our world view  - where we optimise until we find a new more efficient optimiser. Let&rsquo;s look at the evidence that this works. Currently as researchers we push machine learning forward under four approaches:</p>
 <ol>
 <li>New architectures (topologies of a network)</li>
 <li>Collect larger and more interesting datasets (better environments)</li>
@@ -311,12 +311,15 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>This statement is much harder to quantify so let&rsquo;s just outline a sketch. Entropy evolution is a tediously slow process, with irreversible processes taking thousands of years to create simple structure. Genes on the other hand replicate exceptionally quickly making even more complex structures. Next, if we compare genetic evolution with cultural evolution, we find the largest difference is that genes use survival to evaluate fitness whilst memes require other people to imitate them to evaluate fitness. Thus, the optimisation step for genes is once a generation whilst for memes it is almost instantaneous. Equally by considering markets, the true values of a resource propagate almost instantaneously, to the point that market equilibrium shift so quickly that government intervention is required at times.</p>
 <p>The rigorous way to evaluate this is to consider how big the search space is which each optimiser must travel through. Further considerations also include the nature of the surface, in terms of continuity and shape. For example, both surfaces shown below have minimum at the same point - however in the oscillatory example, its much harder to find the minimum.</p>
 <p><figure>
-    <img src="quadratic.png" width="400"/> 
+    <img src="quadratic.png"/> 
 </figure>
- <figure>
-    <img src="xsin%28x%29.png" width="400"/> 
+
+<figure>
+    <img src="xsinx.png"/> 
 </figure>
 </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>To conclude, we can consider history through the lens of optimisation. This leads us to consider the ramifications and the importance of recent work in deep learning as the beginning of a new era of growth, just as the market ushered in the industrial revolution or RNA led to complex life. This approach also hints at further, that as deep nets become more widespread the chance of new inner optimisation must be checked, as this loop is likely to be caused unexpectedly and not by our own hands. Finally, using this approach we can extrapolate from previous malign optimisations the ramifications of dangerous AGI.</p>
 
       </article>
 
