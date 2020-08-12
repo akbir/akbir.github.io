@@ -18,8 +18,7 @@
       <pubDate>Wed, 05 Aug 2020 17:48:55 +0100</pubDate>
       
       <guid>https://akbir.dev/post/history-through-optimisation/</guid>
-      <description>Recently I’ve taken to framing events as quantity/optimisation pairs. This is the de-facto framework in machine learning and to evaluate its utility, I wanted to apply it to existing history. These ideas were firstly introduced to me by Eliezier and Richard.
-Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity.</description>
+      <description>Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&amp;rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.</description>
     </item>
     
     <item>
