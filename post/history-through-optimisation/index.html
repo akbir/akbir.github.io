@@ -18,6 +18,8 @@
 optimisers,
 history,
 entropy,
+markets,
+pareto,
 ">
 
 
@@ -40,6 +42,8 @@ entropy,
 <meta property="article:tag" content="optimisers" />
 <meta property="article:tag" content="history" />
 <meta property="article:tag" content="entropy" />
+<meta property="article:tag" content="markets" />
+<meta property="article:tag" content="pareto" />
 
 
 
@@ -53,8 +57,7 @@ entropy,
 />
 <meta
   name="twitter:description"
-  content="Recently I’ve taken to framing events as quantity/optimisation pairs. This is the de-facto framework in machine learning and to evaluate its utility, I wanted to apply it to existing history. These ideas were firstly introduced to me by Eliezier and Richard.
-Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+  content="Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://akbir.dev/post/history-through-optimisation/" />
@@ -71,7 +74,7 @@ Introduction All decision tasks (questions with Yes-No answers) can be framed as
     "articleSection" : "post",
     "name" : "History Through Optimisation",
     "headline" : "History Through Optimisation",
-    "description" : "Recently I’ve taken to framing events as quantity\/optimisation pairs. This is the de-facto framework in machine learning and to evaluate its utility, I wanted to apply it to existing history. These ideas were firstly introduced to me by Eliezier and Richard.\nIntroduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity.",
+    "description" : "Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It\u0026rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -82,7 +85,7 @@ Introduction All decision tasks (questions with Yes-No answers) can be framed as
     "datePublished": "2020-08-05 17:48:55 \u002b0100 BST",
     "dateModified" : "2020-08-05 17:48:55 \u002b0100 BST",
     "url" : "https:\/\/akbir.dev\/post\/history-through-optimisation\/",
-    "wordCount" : "5921",
+    "wordCount" : "5880",
     "keywords" : [ "Blog" ]
 }
 </script>
@@ -170,8 +173,7 @@ if (!doNotTrack) {
     <span class="f6 gray">August 5, 2020</span>
 
       <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-        <p><em>Recently I’ve taken to framing events as quantity/optimisation pairs. This is the de-facto framework in machine learning and to evaluate its utility, I wanted to apply it to existing history. These ideas were firstly introduced to me by Eliezier and Richard.</em></p>
-<h2 id="introduction">Introduction</h2>
+        <h2 id="introduction">Introduction</h2>
 <p>All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated. Do I recommend we do this? Hell no. But if we want to create intelligent agents, it&rsquo;s worth looking at what processes led to the most intelligent agents we know, humans.</p>
 <p>Before we start, we should clarify some terms. An optimisation is an abstraction for finding the “best” of something. It has 3 prerequisites; a <em>system</em>, a set of <em>configurations</em> and an <em>objective</em>. In general an optimiser finds the configurations of the system such that it best fits the quantity (objective). Below we set some ground rules:</p>
 <ol>
