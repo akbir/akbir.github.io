@@ -5,7 +5,6 @@
     <link>https://akbir.dev/categories/</link>
     <description>Recent content in Categories on akbir khan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>© 2016-19 &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt;. Made by &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;@siegerts&lt;/a&gt;.</copyright><atom:link href="https://akbir.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-uk</language><atom:link href="https://akbir.dev/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
