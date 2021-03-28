@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on akbir khan</title>
-    <link>uild/post/</link>
+    <link>https://akbir.dev/post/</link>
     <description>Recent content in Posts on akbir khan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© 2016-19 &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt;. Made by &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;@siegerts&lt;/a&gt;.</copyright>
-    <lastBuildDate>Wed, 05 Aug 2020 17:48:55 +0100</lastBuildDate><atom:link href="uild/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Aug 2020 17:48:55 +0100</lastBuildDate><atom:link href="https://akbir.dev/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>History Through Optimisation</title>
-      <link>uild/post/history-through-optimisation/</link>
+      <link>https://akbir.dev/post/history-through-optimisation/</link>
       <pubDate>Wed, 05 Aug 2020 17:48:55 +0100</pubDate>
       
-      <guid>uild/post/history-through-optimisation/</guid>
+      <guid>https://akbir.dev/post/history-through-optimisation/</guid>
       <description>Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&amp;rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.</description>
     </item>
     
     <item>
       <title>Remembering Big Narstie</title>
-      <link>uild/post/remembering-big-narstie/</link>
+      <link>https://akbir.dev/post/remembering-big-narstie/</link>
       <pubDate>Sat, 25 Jul 2020 17:38:55 +0100</pubDate>
       
-      <guid>uild/post/remembering-big-narstie/</guid>
+      <guid>https://akbir.dev/post/remembering-big-narstie/</guid>
       <description>One of my biggest fears is forgetting things, it&amp;rsquo;s like the beginning of dementia and the loss of self. So when I realise that some of favourite internet moments are being slowly removed, I get unnecessarily stressed.
 For example, recently I tried to show my friends Big Narstie on Toddla T&amp;rsquo;s BBC 1Xtra show. We simply could not find it. It&amp;rsquo;s incredibly hilarious and shows the unfiltered Narstie that I&amp;rsquo;ve come to trust.</description>
     </item>
     
     <item>
       <title>Lessons From My First Job</title>
-      <link>uild/post/lessons-from-my-first-job/</link>
+      <link>https://akbir.dev/post/lessons-from-my-first-job/</link>
       <pubDate>Fri, 01 May 2020 21:35:13 +0100</pubDate>
       
-      <guid>uild/post/lessons-from-my-first-job/</guid>
+      <guid>https://akbir.dev/post/lessons-from-my-first-job/</guid>
       <description>For a couple of my peers and myself, covid-19 has provided a time for some introspection and with that the existential regret that we don’t really know what we’re doing here. 2 years into my career, I’ve decided to consolidate what principles I&amp;rsquo;ve learnt for the next five years.
 Be Kinder To People My idea of business has been profoundly influenced by pop culture. From Steve Jobs to John Draper, those titans of industry showed me that to be successful you have to be mean, ruthless and unforgiving.</description>
     </item>
     
     <item>
       <title>Golang&#39;s Rand and Concurrency</title>
-      <link>uild/post/golangs-rand-and-concurrency/</link>
+      <link>https://akbir.dev/post/golangs-rand-and-concurrency/</link>
       <pubDate>Mon, 27 Apr 2020 16:12:40 +0100</pubDate>
       
-      <guid>uild/post/golangs-rand-and-concurrency/</guid>
+      <guid>https://akbir.dev/post/golangs-rand-and-concurrency/</guid>
       <description>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
 The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
  Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
@@ -50,40 +50,40 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
     
     <item>
       <title>Quantum Teleportation 101</title>
-      <link>uild/post/quantum-teleportation-101/</link>
+      <link>https://akbir.dev/post/quantum-teleportation-101/</link>
       <pubDate>Tue, 03 Dec 2019 16:12:40 +0100</pubDate>
       
-      <guid>uild/post/quantum-teleportation-101/</guid>
+      <guid>https://akbir.dev/post/quantum-teleportation-101/</guid>
       <description>Twice in the past week i’ve been asked to explain Quantum Teleportation (QT), firstly at a talk given at a research house and secondly by my tutee. I ended up asking myself plenty of questions as they went by and below wanted to write a concise explanation.
 Teleportation Doesn’t Really Mean What You Think Quantum teleportation is a protocol for how we can communicate information with entangled quantum states. It has very little to do with our science fiction idea of teleportation — where matter seemingly hops through space and time.</description>
     </item>
     
     <item>
       <title>Testing For Deep Learning</title>
-      <link>uild/post/testing-for-deep-learning/</link>
+      <link>https://akbir.dev/post/testing-for-deep-learning/</link>
       <pubDate>Mon, 07 Oct 2019 16:12:40 +0100</pubDate>
       
-      <guid>uild/post/testing-for-deep-learning/</guid>
+      <guid>https://akbir.dev/post/testing-for-deep-learning/</guid>
       <description>One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.
 In particular, our product utilised &amp;ldquo;online learning’’, in which each model is trained specifically for a client.</description>
     </item>
     
     <item>
       <title>AI Superpowers (summary)</title>
-      <link>uild/post/ai-superpowers-summary/</link>
+      <link>https://akbir.dev/post/ai-superpowers-summary/</link>
       <pubDate>Wed, 02 Jan 2019 16:12:40 +0100</pubDate>
       
-      <guid>uild/post/ai-superpowers-summary/</guid>
+      <guid>https://akbir.dev/post/ai-superpowers-summary/</guid>
       <description>Following on from advice from a flatmate, I’ve decided I’ll be writing summaries of books I’ve just read — hopefully to flush out some of their ideas within my head.
 Kai-Fu Lee is someone everyone should know more about. As a PhD student at Carnegie Mellon, Lee created the first speaker-independent continuous speech recognition system. As the second AI winter was settling in, Lee worked at companies such as Microsoft, Apple and even headed up Google China, witnessing the rise of Eastern and Western tech companies.</description>
     </item>
     
     <item>
       <title>Understanding Word2Vec</title>
-      <link>uild/post/understanding-word2vec/</link>
+      <link>https://akbir.dev/post/understanding-word2vec/</link>
       <pubDate>Thu, 09 Aug 2018 16:12:40 +0100</pubDate>
       
-      <guid>uild/post/understanding-word2vec/</guid>
+      <guid>https://akbir.dev/post/understanding-word2vec/</guid>
       <description>As powerful as computers have become they are still relatively &amp;ldquo;stupid&amp;rdquo;. In fact, computing power normally only tells you how quickly they can perform simple calculations like adding and subtracting. What computers are really bad at is more general abstract questions. That’s stuff like &amp;ldquo;can you notice pedestrians in a photo&amp;rdquo; or &amp;ldquo;can you realise how the words &amp;lsquo;king&amp;rsquo; and &amp;lsquo;queen&amp;rsquo; are related&amp;rdquo;?
 What computers really get is vectors, they love them.</description>
     </item>
