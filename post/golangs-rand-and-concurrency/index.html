@@ -97,6 +97,27 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
 />
 
 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-59067982-2', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
     <link rel="shortcut icon" href="https://akbir.dev/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="https://akbir.dev/apple-touch-icon.png" />
@@ -152,7 +173,7 @@ When rendering the image, we iterate through each position and call the sample m
 <script type="application/javascript" src="https://gist.github.com/akbir/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
 
 <p>Now lets check the runtimes:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Single Thread</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Single Thread</span>
 Elapsed: 1m54.230536119s
 <span style="color:#75715e"># Multiple Threads</span>
 Elapsed: 4m13.680876913s
@@ -173,7 +194,7 @@ Elapsed: 4m13.680876913s
 </p>
 <h3 id="the-results">The Results</h3>
 <p>After some tuning of the number of threads to use (as suggested by a friend 2*NumCores), my final speed up was:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Multiple Threads</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Multiple Threads</span>
 Elapsed: 23.765684225s
 </code></pre></div><p>which was a nice 4x speed up!</p>
 
