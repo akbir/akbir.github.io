@@ -1,71 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://akbir.dev/</loc>
     <lastmod>2020-08-05T17:48:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/history-through-optimisation/</loc>
     <lastmod>2020-08-05T17:48:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/</loc>
     <lastmod>2020-08-05T17:48:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/remembering-big-narstie/</loc>
     <lastmod>2020-07-25T17:38:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/lessons-from-my-first-job/</loc>
     <lastmod>2020-05-01T21:35:13+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/golangs-rand-and-concurrency/</loc>
     <lastmod>2020-04-27T16:12:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/quantum-teleportation-101/</loc>
     <lastmod>2019-12-03T16:12:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/testing-for-deep-learning/</loc>
     <lastmod>2019-10-07T16:12:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/ai-superpowers-summary/</loc>
     <lastmod>2019-01-02T16:12:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/post/understanding-word2vec/</loc>
     <lastmod>2018-08-09T16:12:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/series/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://akbir.dev/tags/</loc>
   </url>
-  
 </urlset>
