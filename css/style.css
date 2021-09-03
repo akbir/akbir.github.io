@@ -4,12 +4,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+a {
+  color: green;
+  text-decoration:none;
+}
+
 code {
   padding: 2px 4px;
   font-size: 90%;
   background-color: #eeeeee;
-  /* border-radius: 4px; */
-}
+/*   border-radius: 4px; 
+*/}
 
 pre {
   display: block;
