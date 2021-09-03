@@ -8,7 +8,7 @@
     <language>en-uk</language>
     <lastBuildDate>Wed, 05 Aug 2020 17:48:55 +0100</lastBuildDate><atom:link href="https://akbir.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>History Through Optimisation</title>
+      <title>history through optimisation</title>
       <link>https://akbir.dev/post/history-through-optimisation/</link>
       <pubDate>Wed, 05 Aug 2020 17:48:55 +0100</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Remembering Big Narstie</title>
+      <title>remembering Big Narstie</title>
       <link>https://akbir.dev/post/remembering-big-narstie/</link>
       <pubDate>Sat, 25 Jul 2020 17:38:55 +0100</pubDate>
       
@@ -27,7 +27,7 @@ For example, recently I tried to show my friends Big Narstie on Toddla T&amp;rsq
     </item>
     
     <item>
-      <title>Lessons From My First Job</title>
+      <title>lessons from my first job</title>
       <link>https://akbir.dev/post/lessons-from-my-first-job/</link>
       <pubDate>Fri, 01 May 2020 21:35:13 +0100</pubDate>
       
@@ -37,7 +37,7 @@ Be Kinder To People My idea of business has been profoundly influenced by pop cu
     </item>
     
     <item>
-      <title>Golang&#39;s Rand and Concurrency</title>
+      <title>golang&#39;s rand and concurrency</title>
       <link>https://akbir.dev/post/golangs-rand-and-concurrency/</link>
       <pubDate>Mon, 27 Apr 2020 16:12:40 +0100</pubDate>
       
@@ -48,7 +48,7 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
     </item>
     
     <item>
-      <title>Quantum Teleportation 101</title>
+      <title>quantum teleportation 101</title>
       <link>https://akbir.dev/post/quantum-teleportation-101/</link>
       <pubDate>Tue, 03 Dec 2019 16:12:40 +0100</pubDate>
       
@@ -58,7 +58,7 @@ Teleportation Doesn’t Really Mean What You Think Quantum teleportation is a pr
     </item>
     
     <item>
-      <title>Testing For Deep Learning</title>
+      <title>testing for deep learning</title>
       <link>https://akbir.dev/post/testing-for-deep-learning/</link>
       <pubDate>Mon, 07 Oct 2019 16:12:40 +0100</pubDate>
       
@@ -68,7 +68,7 @@ In particular, our product utilised &amp;ldquo;online learning’’, in which e
     </item>
     
     <item>
-      <title>AI Superpowers (summary)</title>
+      <title>AI superpowers (summary)</title>
       <link>https://akbir.dev/post/ai-superpowers-summary/</link>
       <pubDate>Wed, 02 Jan 2019 16:12:40 +0100</pubDate>
       
@@ -78,7 +78,7 @@ Kai-Fu Lee is someone everyone should know more about. As a PhD student at Carne
     </item>
     
     <item>
-      <title>Understanding Word2Vec</title>
+      <title>understanding Word2Vec</title>
       <link>https://akbir.dev/post/understanding-word2vec/</link>
       <pubDate>Thu, 09 Aug 2018 16:12:40 +0100</pubDate>
       
@@ -88,13 +88,14 @@ What computers really get is vectors, they love them.</description>
     </item>
     
     <item>
-      <title>About</title>
+      <title>about</title>
       <link>https://akbir.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://akbir.dev/about/</guid>
-      <description>Hi, I&amp;rsquo;m Akbir! I&amp;rsquo;m a researcher who cares about operationalising artificial intelligence to benefit people&amp;rsquo;s lives. I&amp;rsquo;m obsessed with machine learning and its various subdomains including safety, robustness and social learning. I blog here to discuss any ideas that take my interest, and as a means to help solidify my opinion (e.g. a form of Feynman test).
-I&amp;rsquo;m currently, a Senior Researcher at Tractable, where I develop multi-modal models to evaluate in the wild data - e.</description>
+      <description>Hi, I&amp;rsquo;m Akbir. I am an artificial intelligence (AI) PhD candidate at UCL, advised by Tim Rocktäschel and Edward Grefenstette and affiliated with UCL DARK lab.
+I&amp;rsquo;m interested in studying techniques to ensure cooperative AI and promoting safe social learning. I consider these problems primarily in the setting of deep reinforcement learning.
+In my extra time, I help as a Senior Researcher at Tractable, where I develop multi-modal models to evaluate damage on vehicles.</description>
     </item>
     
   </channel>
