@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-uk"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="machine learning,
+multi-agent,
+reinforcement learning,
+social dilemmas,
+cooperation,
+ai safety,
+AGI,
+">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="an argument for prosocial agents" />
+<meta property="og:site_name" content="akbir khan" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://akbir.dev/post/an-argument-for-prosocial-agents/" />
+<meta property="og:locale" content="en-uk" />
+<meta property="article:published_time" content="2020-11-02
+" /> <meta property="article:modified_time" content="2020-11-02
+" />
+
+
+<meta property="article:tag" content="machine learning" />
+<meta property="article:tag" content="multi-agent" />
+<meta property="article:tag" content="reinforcement learning" />
+<meta property="article:tag" content="social dilemmas" />
+<meta property="article:tag" content="cooperation" />
+<meta property="article:tag" content="ai safety" />
+<meta property="article:tag" content="AGI" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@akbirkhan" />
+<meta name="twitter:creator" content="@akbirkhan" />
+<meta
+  name="twitter:title"
+  content="an argument for prosocial agents | akbir khan"
+/>
+<meta
+  name="twitter:description"
+  content="To build machine-learning systems (agents) that are useful in the real world, they need to be able to cooperate with each other and with humans, not only at deployment but throughout their lifetime. I predicate my research on this and the following beliefs:
+Multi-agent deployment: Transformative AI is unlikely to appear in isolation, but will instead be developed by multiple competing actors, giving rise to a large population of capable agents [1, 2].|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://akbir.dev/post/an-argument-for-prosocial-agents/" />
+
+
+    <script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/akbir.dev\/"
+    },
+    "articleSection" : "post",
+    "name" : "an argument for prosocial agents",
+    "headline" : "an argument for prosocial agents",
+    "description" : "To build machine-learning systems (agents) that are useful in the real world, they need to be able to cooperate with each other and with humans, not only at deployment but throughout their lifetime. I predicate my research on this and the following beliefs:\nMulti-agent deployment: Transformative AI is unlikely to appear in isolation, but will instead be developed by multiple competing actors, giving rise to a large population of capable agents [1, 2].",
+    "inLanguage" : "en-US",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-11-02 17:48:55 \u002b0100 \u002b0100",
+    "dateModified" : "2020-11-02 17:48:55 \u002b0100 \u002b0100",
+    "url" : "https:\/\/akbir.dev\/post\/an-argument-for-prosocial-agents\/",
+    "wordCount" : "487",
+    "keywords" : [ "Blog" ]
+}
+</script>
+
+    <title>an argument for prosocial agents</title>
+    <link rel="canonical" href="https://akbir.dev/post/an-argument-for-prosocial-agents/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://akbir.dev/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-59067982-2', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="https://akbir.dev/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://akbir.dev/apple-touch-icon.png" />
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+
+<body
+  lang="en-uk"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://akbir.dev/" class="b bb bw1 pb1 no-underline black">akbir khan</a>
+  <span class="b"> / </span>
+  <a href="https://akbir.dev/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">an argument for prosocial agents</h1>
+    <span class="f6 gray">November 2, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>To build machine-learning systems (agents) that are useful in the real world, they need to be able to cooperate with each other and with humans, not only at deployment but throughout their lifetime. I predicate my research on this and the following beliefs:</p>
+<p><strong>Multi-agent deployment</strong>: Transformative AI is unlikely to appear in isolation, but will instead be developed by multiple competing actors, giving rise to a large population of capable agents [1, 2].</p>
+<p><strong>Multi-agent training</strong>: Transformative AI is likely to be produced by an automatic curriculum, and one promising approach for this is multi-agent curricula [3].</p>
+<p><strong>Lifetime learning</strong>: Agents are not only trained then deployed in the real-world, but are continually trained afterwards. This training will likely be decentralised and within a population of competing agents, as such, the boundary between training and deployment will become less clear.</p>
+<p>This creates the following concerns:</p>
+<p><strong>It is difficult to deploy cooperative agents</strong>: Apriori, agents that are cooperative or altruistic are vulnerable to being exploited by more selfish agents. Thus, agents successful in competitive markets are likely to be selfishly motivated. Large populations of selfish agents easily lead to catastrophic events, for example large market failures [4] or resource exhaustion [5].</p>
+<p><strong>It is difficult (post-deployment) to train cooperative agents</strong>: Agents that are trained in a population of selfish agents will be unable to develop cooperative strategies [6]. This restricts our ability to create cooperative agents over time, thus making selfish (misaligned) AI more likely.</p>
+<p><strong>It is difficult to de-risk multi-agent systems</strong>: Transformative AI trained by multi-agent interactions are not only shaped by their reward function but the interactions with other agents in their population [7]. System failure cannot be attributed to a single-agent, thus work on (single agent) interpretability or reward modelling is likely insufficient to de-risk these interactions [8].</p>
+<p>To address the risk from these concerns, we need to:</p>
+<p><strong>Develop prosocial agents</strong>: Altruistic agents do not survive in competitive markets whilst the behaviour of selfish agents leads to cooperation failure [9]. Thus we require prosocial agents -  those which actively seek (cooperative) optimal policies whilst being intolerant of exploitation. This behaviour mitigates the aforementioned concerns whilst sustaining the mechanisms of a competitive market.</p>
+<p><strong>Ensure multi-agent curricula incentivise prosociality</strong>: We need to guarantee that weak AI retains its prosociality when trained post-deployment. Thus to ensure training still produces aligned AI, we need to build our understanding of these multi-agent systems, and build methods that continually incentivise prosociality.</p>
+<p>[1] <a href="https://www.alignmentforum.org/posts/dSAJdi99XmqftqXXq/eight-claims-about-multi-agent-agi-safety">https://www.alignmentforum.org/posts/dSAJdi99XmqftqXXq/eight-claims-about-multi-agent-agi-safety</a>
+[2] Critch, Andrew, and David Krueger. &ldquo;AI Research Considerations for Human Existential Safety (ARCHES).&rdquo; arXiv preprint arXiv:2006.04948 (2020).
+[3] Leibo, Joel Z., et al. &ldquo;Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research.&rdquo; arXiv preprint arXiv:1903.00742 (2019).
+[4] <a href="https://en.wikipedia.org/wiki/2010_flash_crash">https://en.wikipedia.org/wiki/2010_flash_crash</a>
+[5] <a href="https://en.wikipedia.org/wiki/Resource_depletion">https://en.wikipedia.org/wiki/Resource_depletion</a>
+[6] Axelrod, Robert, and William Donald Hamilton. &ldquo;The evolution of cooperation.&rdquo; science 211.4489 (1981): 1390-1396.
+[7]https://www.alignmentforum.org/posts/BXMCgpktdiawT3K5v/multi-agent-safety
+[8] Yudkowsky, Eliezer. Inadequate equilibria: Where and how civilizations get stuck. Machine Intelligence Research Institute, 2017.
+[9] <a href="https://longtermrisk.org/research-agenda">https://longtermrisk.org/research-agenda</a></p>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: November 2, 2020. Published at: 2020-11-02.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>

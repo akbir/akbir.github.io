@@ -6,7 +6,17 @@
     <description>Recent content on akbir khan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Wed, 05 Aug 2020 17:48:55 +0100</lastBuildDate><atom:link href="https://akbir.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Nov 2020 17:48:55 +0100</lastBuildDate><atom:link href="https://akbir.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>an argument for prosocial agents</title>
+      <link>https://akbir.dev/post/an-argument-for-prosocial-agents/</link>
+      <pubDate>Mon, 02 Nov 2020 17:48:55 +0100</pubDate>
+      
+      <guid>https://akbir.dev/post/an-argument-for-prosocial-agents/</guid>
+      <description>To build machine-learning systems (agents) that are useful in the real world, they need to be able to cooperate with each other and with humans, not only at deployment but throughout their lifetime. I predicate my research on this and the following beliefs:
+Multi-agent deployment: Transformative AI is unlikely to appear in isolation, but will instead be developed by multiple competing actors, giving rise to a large population of capable agents [1, 2].</description>
+    </item>
+    
     <item>
       <title>history through optimisation</title>
       <link>https://akbir.dev/post/history-through-optimisation/</link>
