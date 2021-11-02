@@ -104,8 +104,8 @@ What computers really get is vectors, they love them.</description>
       
       <guid>https://akbir.dev/about/</guid>
       <description>Hi, I&amp;rsquo;m Akbir. I am an artificial intelligence (AI) PhD candidate at UCL, advised by Tim Rocktäschel and Edward Grefenstette and affiliated with UCL DARK lab.
-I&amp;rsquo;m interested in studying techniques to ensure cooperative AI and promoting safe social learning. I consider these problems primarily in the setting of deep reinforcement learning.
-In my extra time, I help as a Senior Researcher at Tractable, where I develop multi-modal models to evaluate damage on vehicles.</description>
+I&amp;rsquo;m interested in studying techniques to ensure cooperative AI. I consider these problems primarily in the setting of multi-agent deep reinforcement learning.
+In my extra time, I help as a Senior Researcher at Tractable, where I develop multi-modal models to evaluate damage on vehicles. Before this, I was CRO of Spherical Defence Labs, using language models to create network-level intrusion detection systems.</description>
     </item>
     
   </channel>
