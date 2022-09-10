@@ -54,7 +54,7 @@ Be Kinder To People My idea of business has been profoundly influenced by pop cu
       <guid>https://akbir.dev/post/golangs-rand-and-concurrency/</guid>
       <description>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
 The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
- Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
+Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
     </item>
     
     <item>
