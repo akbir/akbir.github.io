@@ -71,8 +71,8 @@ What computers really get is vectors, they love them.|Blog and website of Akbir 
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2018",
-    "datePublished": "2018-08-09 16:12:40 \u002b0100 BST",
-    "dateModified" : "2018-08-09 16:12:40 \u002b0100 BST",
+    "datePublished": "2018-08-09 16:12:40 \u002b0100 \u002b0100",
+    "dateModified" : "2018-08-09 16:12:40 \u002b0100 \u002b0100",
     "url" : "https:\/\/akbir.dev\/post\/understanding-word2vec\/",
     "wordCount" : "1189",
     "keywords" : [ "Blog" ]
@@ -170,14 +170,14 @@ if (!doNotTrack) {
 <h3 id="word2vec">Word2Vec</h3>
 <p>Within Natural Language Processing, focus has been on producing robust representations of words. Telling a computer “Tom sat on the chair” and then asking, “Where is Tom?” is relatively difficult for a computer, as it requires an understanding of Tom as an object/noun and the relationship that the verb “sat” implies.</p>
 <p>Computers need some way to represent a word. In particular, Neural Networks (which do most of the work) need <em>continuous</em> representations. Think of <em>continuous</em> as meaning “not in chunks”, if something is <em>continuous</em> then there are no gaps between any two points (e.g in the flow of water). On the otherhand words are <em>discrete</em>, they literally are separate tokens, and between things like “cat” and “dog” there is no intermediate concept.</p>
-<p>Linguists had a theory dubbed the <a href="https://en.wikipedia.org/wiki/Distributional_semantics#Distributional_hypothesis">“distributional hypothesis”</a> which suggested that words are defined by the company that they keep. If I remove a _____ from a sentence, you can guess what it is (in this case ‘word’).  A group of [computer scientists] (<a href="https://arxiv.org/pdf/1310.4546.pdf),">https://arxiv.org/pdf/1310.4546.pdf),</a> decided to train neural networks to play this game, and at the same time allowed the network to modify the vector representation of the words in order to succeed.</p>
+<p>Linguists had a theory dubbed the <a href="https://en.wikipedia.org/wiki/Distributional_semantics#Distributional_hypothesis">“distributional hypothesis”</a> which suggested that words are defined by the company that they keep. If I remove a _____ from a sentence, you can guess what it is (in this case ‘word’).  A group of [computer scientists] (<a href="https://arxiv.org/pdf/1310.4546.pdf)">https://arxiv.org/pdf/1310.4546.pdf)</a>, decided to train neural networks to play this game, and at the same time allowed the network to modify the vector representation of the words in order to succeed.</p>
 <p>So, the neural network is fed a sentence from a text such as “the cat sat on the” and told the answer should be “mat”. The network first changes each word into a <em>one-hot</em> vector. This type of vector is a form of index, and is filled with N zeros, where N is the number of words in the entire vocabulary of the text. The zero which corresponds to the desired word is flipped to a one. So, if my entire vocabulary was 3 words long and the sentence is “the cat sat” the one-hot vectors are:</p>
-<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>The biggest hold back is that for a large text, these vectors are pretty huge, and we’d like our representations to be a bit more <em>informationally</em> dense, so you can use fewer numbers to express more information about the entity.</p>
 <p><img src="https://akbir.dev/img/word2vec.png" alt="neural network diagram"></p>
 <p>So, the first layer of the neural network takes the large one-hot vectors of a phrase and adds them together, creating an N-hot vector (which has multiple ones in it).  This is then fed into the first section of the neural network which outputs a smaller vector representation (the hidden state). We call this the word <em>embedding</em> (and it’s the important part).</p>
 <p>The new single vector representation – the hidden state, is then taken by the rest of the network to predict what the next word should be. The neural network tells us its belief by outputting a vector which contains, in each dimension, the probability that it is the corresponding word (we call this a Softmax classifier):</p>
-<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p><em>The network believes the next word is 10% likely to be &ldquo;The&rdquo;, 30% likely to &ldquo;Black&rdquo; and 60% likely to be &ldquo;Cat&rdquo;.</em></p>
 <p>We train the model, so it’s allowed to change the word embedding layer to try improving it’s score.  In the example above we take the hidden state representation to be the corresponding vector for “mat”. This is useful because the vector representation of &ldquo;mat&rdquo; depends purely on the words around it and the model must train to fit all other phrases which also predict &ldquo;mat&rdquo;.</p>
 <p>When we look at these vectors (we can represent them as scatter plots in 2 and 3 dimensions), we see rich relationships between them. We find that certain directions between vectors represent relationships between words. For example, gendered nouns are always the same distance from each other (king/queen, man/woman, mr/mrs) and that verb tenses are in the same direction (walking/walked, swimming/swam).</p>

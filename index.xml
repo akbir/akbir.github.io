@@ -54,7 +54,7 @@ Be Kinder To People My idea of business has been profoundly influenced by pop cu
       <guid>https://akbir.dev/post/golangs-rand-and-concurrency/</guid>
       <description>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
 The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
- Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
+Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.</description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@ What computers really get is vectors, they love them.</description>
       <guid>https://akbir.dev/about/</guid>
       <description>Hi, I&amp;rsquo;m Akbir. I am an artificial intelligence (AI) PhD candidate at UCL, advised by Tim Rocktäschel and Edward Grefenstette and affiliated with UCL DARK lab.
 I&amp;rsquo;m interested in studying techniques to ensure cooperative AI. I consider these problems primarily in the setting of multi-agent deep reinforcement learning.
-In my extra time, I help as a Senior Researcher at Tractable, where I develop multi-modal models to evaluate damage on vehicles. Before this, I was CRO of Spherical Defence Labs, using language models to create network-level intrusion detection systems.</description>
+My research is shaped by my ML deployments and as proxy, my AI safety concerns. As a Senior Researcher at Tractable, I&amp;rsquo;ve built vision models for car apprasial.</description>
     </item>
     
   </channel>

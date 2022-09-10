@@ -71,8 +71,8 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2019",
-    "datePublished": "2019-10-07 16:12:40 \u002b0100 BST",
-    "dateModified" : "2019-10-07 16:12:40 \u002b0100 BST",
+    "datePublished": "2019-10-07 16:12:40 \u002b0100 \u002b0100",
+    "dateModified" : "2019-10-07 16:12:40 \u002b0100 \u002b0100",
     "url" : "https:\/\/akbir.dev\/post\/testing-for-deep-learning\/",
     "wordCount" : "1157",
     "keywords" : [ "Blog" ]
@@ -181,7 +181,7 @@ if (!doNotTrack) {
 <p><strong>Fixed seed testing</strong> - We start with an obvious one because we’d be reminisce to not mention it. For all your testing, fix the seed of your model. Be aware of libraries such as PyTorch this involves extra steps if using the GPU, although we’d recommend you run all unit tests on the CPU and leave the GPU deployments to integration testing.</p>
 <p><strong>Named tensor dimensions</strong> - Whilst to machine learning researchers the consensus of tensor dimensions representing (Batch_Size x Features) is well established, for sequential modelling this can sometimes not be the case (look at PyTorch’s implementation for <a href="https://pytorch.org/docs/master/generated/torch.nn.RNN.html">RNNs</a>). In those cases, it becomes useful to specify exactly what the first dimension of your tensor refers to. There’s a nice methodology presented here but until incorporated as default into libraries, any new tensor created won’t follow this convention!</p>
 <p><strong>Setting constant weights</strong> - As mentioned software engineers need to be able to calculate outputs of a network component easily, which can difficult with matrix calculations and the traditionally small values networks use values bounded between 0 and 1. To appease this issue, for all testing we pre-initialise our weights to a constant value (such as 0.002) which allows for simpler calculation of output vectors. We include the helper function below:</p>
-<pre><code>def set_constant_weights(self, value: float):
+<pre tabindex="0"><code>def set_constant_weights(self, value: float):
     for weight in self.parameters():
         init.constant_(weight, value)
 </code></pre><p><strong>Single batch sanity</strong> - A common sanity check for researchers is to test for supervised/unsupervised models can overfit to a single batch and conveniently, this is also computationally reasonable to run and trained easily — and so can be easily scheduled on Jenkins or other pipeline managers. We consider this a fundamental regression test and apply it daily to check we’re not introducing bugs.</p>

@@ -47,7 +47,7 @@
   name="twitter:description"
   content="This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
 The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
- Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://akbir.dev/post/golangs-rand-and-concurrency/" />
@@ -64,7 +64,7 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
     "articleSection" : "post",
     "name" : "golang\u0027s rand and concurrency",
     "headline" : "golang\u0027s rand and concurrency",
-    "description" : "This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.\nThe Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:\n Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.",
+    "description" : "This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.\nThe Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:\nGo makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -72,8 +72,8 @@ The Idea When rendering an image using a ray-tracer, each pixel value can theore
     "accountablePerson" : "",
     "copyrightHolder" : "",
     "copyrightYear" : "2020",
-    "datePublished": "2020-04-27 16:12:40 \u002b0100 BST",
-    "dateModified" : "2020-04-27 16:12:40 \u002b0100 BST",
+    "datePublished": "2020-04-27 16:12:40 \u002b0100 \u002b0100",
+    "dateModified" : "2020-04-27 16:12:40 \u002b0100 \u002b0100",
     "url" : "https:\/\/akbir.dev\/post\/golangs-rand-and-concurrency\/",
     "wordCount" : "333",
     "keywords" : [ "Blog" ]
@@ -173,11 +173,11 @@ When rendering the image, we iterate through each position and call the sample m
 <script type="application/javascript" src="https://gist.github.com/akbir/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
 
 <p>Now lets check the runtimes:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Single Thread</span>
-Elapsed: 1m54.230536119s
-<span style="color:#75715e"># Multiple Threads</span>
-Elapsed: 4m13.680876913s
-</code></pre></div><p>Unfortunately this didn’t speed things up, even worse, it increased the runtime!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Single Thread</span>
+</span></span><span style="display:flex;"><span>Elapsed: 1m54.230536119s
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Multiple Threads</span>
+</span></span><span style="display:flex;"><span>Elapsed: 4m13.680876913s
+</span></span></code></pre></div><p>Unfortunately this didn’t speed things up, even worse, it increased the runtime!</p>
 <h3 id="the-bug">The Bug</h3>
 <p>If threading was making my program slower, then each thread was clearly unable to act independently. So lets check out sample method:</p>
 <script type="application/javascript" src="https://gist.github.com/akbir/4ae37cc5edbee98ac52ef0c066c2bdd9.js"></script>
@@ -194,9 +194,9 @@ Elapsed: 4m13.680876913s
 </p>
 <h3 id="the-results">The Results</h3>
 <p>After some tuning of the number of threads to use (as suggested by a friend 2*NumCores), my final speed up was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Multiple Threads</span>
-Elapsed: 23.765684225s
-</code></pre></div><p>which was a nice 4x speed up!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Multiple Threads</span>
+</span></span><span style="display:flex;"><span>Elapsed: 23.765684225s
+</span></span></code></pre></div><p>which was a nice 4x speed up!</p>
 
       </article>
 
