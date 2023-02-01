@@ -1,0 +1,12 @@
+img {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 50%;
+ }
+ 
+ @media only screen and (max-width: 767px) {
+    img {
+       float: none;
+       width: 100%;
+    }
+ }
