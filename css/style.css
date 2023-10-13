@@ -22,6 +22,18 @@ code {
   align-items: center;
 }
 
+.baseurl-container {
+  display: flex;
+  align-items: center; /* To vertically center the elements */
+  justify-content: start; /* To position items at the beginning of the container */
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 
 .title-container {
   display: flex;
