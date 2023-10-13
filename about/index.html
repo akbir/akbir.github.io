@@ -139,7 +139,15 @@ My research is shaped by my AI safety concerns. I&rsquo;ve developed machine-lea
   >
 
   <section id="main" class="mt5">
-    <h1 itemprop="name" id="title">about me</h1>
+    <div class="header-container">
+      <h1>about me</h1>
+      
+      <label class="switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+      </label>
+  </div>
+    
 
     <article itemprop="articleBody" id="content" class="w-90 lh-copy">
       <figure><img src="https://akbir.dev/img/me.jpg"/>
@@ -164,10 +172,11 @@ My research is shaped by my AI safety concerns. I&rsquo;ve developed machine-lea
   </footer>
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
-
+<script src="https://akbir.dev/js/darkmode-toggle.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
+
 
 
 
