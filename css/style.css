@@ -1,5 +1,5 @@
 body {
-  -webkit-font-smoothings: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
@@ -15,6 +15,45 @@ code {
   background-color: #eeeeee;
 /*   border-radius: 4px; 
 */}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.baseurl-container {
+  display: flex;
+  align-items: center; /* To vertically center the elements */
+  justify-content: start; /* To position items at the beginning of the container */
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #6fffa3;
+}
+
+body.dark-mode code, body.dark-mode pre {
+  background-color: #555;
+}
 
 pre {
   display: block;
@@ -34,6 +73,7 @@ code {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code.has-jax {
   //https://geoffruddock.com/math-typesetting-in-hugo/
     -webkit-font-smoothing: antialiased;
@@ -41,6 +81,7 @@ code.has-jax {
     border: none !important;
     font-size: 100%;
 }
+
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
