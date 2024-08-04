@@ -6,7 +6,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://akbir.dev/style.css">
+    <link rel="stylesheet" href="https://akbir.dev/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="description" content="" />
 <meta name="HandheldFriendly" content="True" />
@@ -124,7 +124,6 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   </head>
-
 <body
   lang="en-uk"
   class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
@@ -145,7 +144,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
     <span class="f6 gray">October 7, 2019</span>
     
    
-      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <article itemprop="articleBody" id="content" class="w-100 lh-copy">
         <p><em>One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.</em></p>
 <p>In particular, our product utilised &ldquo;online learning’’, in which each model is trained specifically for a client. This makes our models vulnerable to data dependencies as well as technical dependencies.</p>
 <p>Whilst great literature now exists on why machine learning builds technical debt (see <a href="https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf">here</a>), we wanted to focus on methods to alleviate these using testing.</p>
