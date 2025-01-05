@@ -6,7 +6,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://akbir.dev/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="description" content="" />
 <meta name="HandheldFriendly" content="True" />
@@ -46,7 +46,7 @@
 <meta
   name="twitter:description"
   content="One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.
-In particular, our product utilised &ldquo;online learning’’, in which each model is trained specifically for a client.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+In particular, our product utilised &ldquo;online learning’’, in which each model is trained specifically for a client. This makes our models vulnerable to data dependencies as well as technical dependencies.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://akbir.dev/post/testing-for-deep-learning/" />
@@ -63,7 +63,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
     "articleSection" : "post",
     "name" : "testing for deep learning",
     "headline" : "testing for deep learning",
-    "description" : "One of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.\nIn particular, our product utilised \u0026ldquo;online learning’’, in which each model is trained specifically for a client.",
+    "description" : "\u003cp\u003e\u003cem\u003eOne of the largest challenges when starting our company was learning how to use deep learning models in production grade software. Whilst we had solved the challenge of proving our models were capable of solving the problem with controlled environment (and nice datasets), building a pipeline and testing suite was difficult and we’d like to share what we’ve learnt.\u003c\/em\u003e\u003c\/p\u003e\n\u003cp\u003eIn particular, our product utilised \u0026ldquo;online learning’’, in which each model is trained specifically for a client. This makes our models vulnerable to data dependencies as well as technical dependencies.\u003c\/p\u003e",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -96,10 +96,8 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
   href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
 />
 
-
-
-    <link rel="shortcut icon" href="https://akbir.dev/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="https://akbir.dev/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <script>
   MathJax = {
     tex: {
@@ -135,7 +133,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
   <span class="b">/ </span>
   <a href="https://akbir.dev/" class="b bb bw1 pb1 no-underline black">akbir khan</a>
   <span class="b"> / </span>
-  <a href="https://akbir.dev/post" class="b bb bw1 pb1 no-underline black">blog</a>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
 
   <section id="main" class="mt5">
 
@@ -152,7 +150,7 @@ In particular, our product utilised &ldquo;online learning’’, in which each 
 <p>Testing is the backbone of any good software project, it is the fundamental way to maintain code. Traditionally it can be broken down into 4 tiers, each abstracting and working on a larger scope than the previous — for deep learning we particularly focus upon on the first two (Unit and Integration).</p>
 <p>Unit testing evaluates code at its component level, where actual outputs are compared with expected outputs. For deep learning this is interrupted as the individual layers (e.g linear, conv layer) to small modules (e.g your custom string-encoders). Whilst the prior are normally well tested by the PyTorch and TF library, the latter provides difficulties.</p>
 <p>Integration testing evaluates the orchestrated performance of components of code together — checking interfaces match and the correct data is being sent between them. In machine learning, we consider this tasks such as Training and Inference. Inherently these tasks involve engagement between your data processing, training mechanisms and deployment, and at each stage, biases can introduced it.</p>
-<p><img src="https://akbir.dev/img/testing_stages.png" alt="testing framework"></p>
+<p><img src="/img/testing_stages.png" alt="testing framework"></p>
 <h3 id="why-it-fails-for-deep-learning">Why it Fails for Deep Learning</h3>
 <p>Some of our pet peeves on why this framing fails:</p>
 <p><strong>Maths is boring</strong> = Calculating tensor multiplications are difficult — and rarely can be done by an engineer as ‘‘back of the envelope calculations’’. The maths is fiddly — even with fixed seed initialisation, the regular Xavier weight initialisation uses 32-bit floats, matrix multiplication involves a large series of calculations and testing modules with batching involves hard-coding tensors with 3 dimensions. Whilst none of these tasks are insurmountable- they massively stifle development time and creating useful unit tests.</p>
