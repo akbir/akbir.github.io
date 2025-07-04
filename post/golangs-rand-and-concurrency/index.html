@@ -46,12 +46,8 @@
 <meta
   name="twitter:description"
   content="This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.
-The Idea
-When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect.
-When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
-
-
-Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the k-th thread would calculate the [k, 2k, ... , nk]-th position pixels within the row.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+The Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:
+Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://akbir.dev/post/golangs-rand-and-concurrency/" />
@@ -68,7 +64,7 @@ Go makes running threads (go routines) really simple and so the idea was to spli
     "articleSection" : "post",
     "name" : "golang\u0027s rand and concurrency",
     "headline" : "golang\u0027s rand and concurrency",
-    "description" : "\u003cp\u003eThis is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.\u003c\/p\u003e\n\u003ch3 id=\u0022the-idea\u0022\u003eThe Idea\u003c\/h3\u003e\n\u003cp\u003eWhen rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect.\nWhen rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:\u003c\/p\u003e\n\u003cscript src=\u0022https:\/\/gist.github.com\/akbir\/2940ff0137aadd7c533fe326b70e855b.js\u0022\u003e\u003c\/script\u003e\n\n\u003cp\u003eGo makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the \u003ccode\u003ek\u003c\/code\u003e-th thread would calculate the \u003ccode\u003e[k, 2k, ... , nk]\u003c\/code\u003e-th position pixels within the row.\u003c\/p\u003e",
+    "description" : "This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.\nThe Idea When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:\nGo makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -152,10 +148,10 @@ Go makes running threads (go routines) really simple and so the idea was to spli
 <h3 id="the-idea">The Idea</h3>
 <p>When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect.
 When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel:</p>
-<script src="https://gist.github.com/akbir/2940ff0137aadd7c533fe326b70e855b.js"></script>
+<script type="application/javascript" src="https://gist.github.com/akbir/2940ff0137aadd7c533fe326b70e855b.js"></script>
 
 <p>Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the <code>k</code>-th thread would calculate the <code>[k, 2k, ... , nk]</code>-th position pixels within the row.</p>
-<script src="https://gist.github.com/akbir/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
+<script type="application/javascript" src="https://gist.github.com/akbir/b05c76681aa330d2ff5c0a222dc2555f.js"></script>
 
 <p>Now lets check the runtimes:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Single Thread</span>
@@ -165,17 +161,17 @@ When rendering the image, we iterate through each position and call the sample m
 </span></span></code></pre></div><p>Unfortunately this didn’t speed things up, even worse, it increased the runtime!</p>
 <h3 id="the-bug">The Bug</h3>
 <p>If threading was making my program slower, then each thread was clearly unable to act independently. So lets check out sample method:</p>
-<script src="https://gist.github.com/akbir/4ae37cc5edbee98ac52ef0c066c2bdd9.js"></script>
+<script type="application/javascript" src="https://gist.github.com/akbir/4ae37cc5edbee98ac52ef0c066c2bdd9.js"></script>
 
 <p>After some debugging (shout out <code>pprof</code>), I noticed that an incredible amount of time was being used by <code>math/rand</code> and the associated synchronisation overhead. Taking a quick look at the <a href="https://golang.org/src/math/rand/rand.go">source code</a>, I notice that the package is globally locked:</p>
 <script src="https://gist.github.com/akbir/999556ad7507e826824f990ae6b4e09b.js"></script>
 <p>For random number generators (RNGs) this makes perfect sense, as RNGs generally calculate the next random number based on the previous, and we’d like RNG to be consistently random across processes. This is good behaviour — however not ideal in our situation.</p>
 <h3 id="the-fix">The Fix</h3>
 <p>To circumvent this issue and gain all the speed benefits of threading, we’d need to provide each thread its own RNG. Thankfully this is fairly simple within go, as the rand package has methods to create unique RNGs, which can be created for each thread independently.
-<script src="https://gist.github.com/akbir/cc1c9d0c8260ce5e104f0fdbfaaeb7d8.js"></script>
+<script type="application/javascript" src="https://gist.github.com/akbir/cc1c9d0c8260ce5e104f0fdbfaaeb7d8.js"></script>
 </p>
 <p>and subsequently update all the existing math/rand calls must be switched to call our RNG instead:
-<script src="https://gist.github.com/akbir/c6ad8ef81ad781d025a5b7b741ca9ca7.js"></script>
+<script type="application/javascript" src="https://gist.github.com/akbir/c6ad8ef81ad781d025a5b7b741ca9ca7.js"></script>
 </p>
 <h3 id="the-results">The Results</h3>
 <p>After some tuning of the number of threads to use (as suggested by a friend 2*NumCores), my final speed up was:</p>

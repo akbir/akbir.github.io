@@ -57,8 +57,7 @@ pareto,
 />
 <meta
   name="twitter:description"
-  content="Introduction
-All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated. Do I recommend we do this? Hell no. But if we want to create intelligent agents, it&rsquo;s worth looking at what processes led to the most intelligent agents we know, humans.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
+  content="Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It&rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.|Blog and website of Akbir Khan, blogging mainly for tech. Opinions expressed are mine."
 />
 <meta name="twitter:image:src" content="" />
 <meta name="twitter:domain" content="https://akbir.dev/post/history-through-optimisation/" />
@@ -75,7 +74,7 @@ All decision tasks (questions with Yes-No answers) can be framed as optimisation
     "articleSection" : "post",
     "name" : "history through optimisation",
     "headline" : "history through optimisation",
-    "description" : "\u003ch2 id=\u0022introduction\u0022\u003eIntroduction\u003c\/h2\u003e\n\u003cp\u003eAll decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It\u0026rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated. Do I recommend we do this? Hell no. But if we want to create intelligent agents, it\u0026rsquo;s worth looking at what processes led to the most intelligent agents we know, humans.\u003c\/p\u003e",
+    "description" : "Introduction All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It\u0026rsquo;s an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we’re in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated.",
     "inLanguage" : "en-US",
     "author" : "",
     "creator" : "",
@@ -183,7 +182,7 @@ All decision tasks (questions with Yes-No answers) can be framed as optimisation
 <h2 id="startnothing">Start/Nothing</h2>
 <p>13.7 Billion Years (+1*10^-43 Sec) Ago</p>
 <p>Something happens, nobody is quite sure when, but all we know is now we&rsquo;ve got lots of energy in a tiny universe, and then suddenly there is a huge universe with plenty of space and time. At this very moment you can&rsquo;t really apply optimisers, you&rsquo;re looking at the most incredible dynamic system in our Universe&rsquo;s history. Thankfully this all calms down in less than 10^-43 of a second. Phew.</p>
-<figure><a href="https://xkcd.com/2240/"><img src="https://imgs.xkcd.com/comics/timeline_of_the_universe.png" width="100%"></a>
+<figure><a href="https://xkcd.com/2240/"><img src="https://imgs.xkcd.com/comics/timeline_of_the_universe.png" width="100%"/></a>
 </figure>
 
 <h2 id="entropysampling">Entropy/Sampling</h2>
@@ -205,13 +204,13 @@ Firstly let&rsquo;s talk about comparative measurements (absolute references are
 <p>Let’s imagine we have a box of indistinguishable particles, at temperature T, each with their own velocity, and the speed of a randomly selected particle defines the configuration. Then we can describe a (Boltzmann) distribution over all possible configurations with a specific probabilistic weight, given by the Boltzman factor:</p>
 <p>$$p_i \propto e^{-\frac{e_i}{\kappa T}}$$</p>
 <p>This particular distribution (for velocities of particles in a gas) is called the Maxwell-Boltzmann Distribution. When we want to measure the state, we are simply sampling from an equivalent distribution. Thus the optimisation necessarily is random, it&rsquo;s pretty much up to chance what velocity we find particles in.</p>
-<figure class="right-align"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Simulation_of_gas_for_relaxation_demonstration.gif">
+<figure class="right-align"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Simulation_of_gas_for_relaxation_demonstration.gif"/>
 </figure>
 
 <p>But wait you might be going &ldquo;But Akbir, my bedroom doesn&rsquo;t randomly sample everytime I look for where my chair is!&rdquo; And you&rsquo;re right, when looking at macroscopic properties (chair location), we end up taking the <em>Thermodynamic Limit</em>:</p>
 <p>$$N \to \infty, V \to \infty, \frac{N}{V} = constant$$</p>
 <p>This transforms our nice distributions into sharp dirac-delta distributions where any sample we take ends up in a single position.</p>
-<figure><img src="/post/history-through-optimisation/dirac_delta.png">
+<figure><img src="dirac_delta.png"/>
 </figure>
 
 <p>But what about at the quantum scale? It turns out when you sample from a distribution (take a measurement), the state can collapse (transform) into another distribution or a fixed state (called an Eigenstate). So for physics, optimisation involves randomly sampling from a system until it eventually keeps giving the same answer (it has fallen into eigenstates which relate to high entropy). We can consider this a positive feedback loop - once you’ve collapsed into a fixed state, you continue to stay within it.</p>
@@ -230,7 +229,7 @@ We can consider single units of cultural replicators as memes - think memes/cult
 <p>Let’s examine spice further. Other animals do not spice their food, it provides little nutrition and the active ingredients are aversive chemicals that evolved to keep insects, fungi and animals away from them. Furthermore, humans aren’t born liking spice. Yet our cooking seems to optimise for effective spice use (heat resistant spices such as garlic and onions are used during cooking whilst cilantro is applied fresh). So how did it end up in our food?</p>
 <p>The answer is that spice has antimicrobial properties, which reduce the risk of pathogens from foods (especially meat). So it&rsquo;s clear that at some point, our ancestors chose to augment recipes by adding spice and noticed less people died. They tinkered away, generation by generation, until we got to our amazing recipes now.</p>
 <p>But why do we end up liking spice? Let&rsquo;s look at peppers and the chemical agent Capsaicin, which fires pain receptors in our body. Children from warmer climates (where meat contamination is more likely) have learnt Capsaicin to not only fire their pain receptors but also release dopamine. This learned behaviour - stems from copying other people. Coming from an South Asian culture, spice tolerance was a mark of adulthood amongst my family. Spice demonstrates how culture shapes our biology.</p>
-<figure><a href="https://xkcd.com/720/"><img src="https://imgs.xkcd.com/comics/recipes.png" width="100%"></a>
+<figure><a href="https://xkcd.com/720/"><img src="https://imgs.xkcd.com/comics/recipes.png" width="100%"/></a>
 </figure>
 
 <p>But what does it mean to be successful? In the example of genes it&rsquo;s the fitness of the environment, but for culture, the environment doesn’t choose what survives, the next generation does. Interestingly humans, who are no smarter than their ape counterparts, are significantly better <a href="https://www.researchgate.net/publication/6017734_Humans_Have_Evolved_Specialized_Skills_of_Social_Cognition_The_Cultural_Intelligence_Hypothesis">imitators</a>. In particular, children have been shown not only to be innately better at copying, but also at choosing whom to copy from. Children are great at using three main proxies for finding the best individuals to copy from: Skill (how an individual performs), Prestige (how others perceive the individual) and Self-Similarity (Age and Ethnicity). Note also, it&rsquo;s not actually the best recipe that is copied, but the most liked chief whose recipes are copied.</p>
@@ -245,10 +244,10 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>Markets fixed a problem we didn’t even realise we had: some people have more resources than they can use and some people really didn&rsquo;t have enough. Why? Because our gene optimisation made us want to hoard so badly.  And by resources here, I&rsquo;m considering land, equipment and even people to work on it!</p>
 <p>There&rsquo;s a finite amount of input resources at any point, and there&rsquo;s a finite number of workers. Let&rsquo;s assume each worker has their own efficiency, which is a function of the resources you give them (I may be really good at making a single chair but panic if you rush me and ask for 10). Now if I had 1 single worker - I&rsquo;d simply give all my resources to them and get the most I can back, but if I have 2 workers? Then I need to give them resources accordingly.</p>
 <p>In the ideal situation with a fixed output and equally efficient workers, we should share the inputs equally. But in the situation where worker 1 is twice as efficient as worker 2, I should probably give more input resources to worker 2. What we want is for resource allocation to be Pareto optimal. This is just econ chat for saying - there exists no changes that could improve the output without reducing other variables. The optima isn’t unique, as we can imagine two completely different scenarios where the overall output is consistent - below is the equal efficiency case for worker 1 (X) and worker 2 (Y).</p>
-<figure><img src="/post/history-through-optimisation/ppf.png"
-    alt="Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable level of production given our input constraints."><figcaption>
-      <p>Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable level of production given our input constraints.</p>
-    </figcaption>
+<figure><img src="ppf.png"
+         alt="Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable level of production given our input constraints."/><figcaption>
+            <p>Points A/B relate to Pareto Optimal production, C is possible yet not Pareto, as production is less than it could be. D is an unachievable level of production given our input constraints.</p>
+        </figcaption>
 </figure>
 
 <p>Now we get the concept, let&rsquo;s solve this problem for the 60 million people in the UK whilst also price all their goods and services accordingly. This begins our next optimisation, which focuses on how markets (attempt) to optimise the allocation of resources to be Pareto Optimal.</p>
@@ -270,7 +269,7 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p>“Agent” is a deliberately ambiguous term to describe anything which takes “actions”. Depending on the layer of abstraction this can be a physical gate in a circuit, all the way up to you - the human (or language model) reading this. When we talk about agents (such as MuZero) we’re talking about lines of code which to some capacity take inputs of an environment (e.g  board of Chess/Go/Shogi) and outputs the next best move.</p>
 <p>Currently our smartest agents are built from neural networks, a formulation of computing inspired by how neurons are wired in biological intelligence. A network consists of many densely connected neurons each with their own associated weight. These weights $W$, varying between 0 and 1, affect the output of each neuron and as such, the network.  The weights of the network, and the way we’ve organised the neurons (topology), are optimised to fit our agents&rsquo; needs. Mathematically we can consider networks as universal function approximators, meaning we can encode any function into a neural network, that means for whatever $x$ and $y$, we can find a neural network $f$ with weights $W$ such that $y=f(x,W)$.</p>
 <p>Agents start with random weights and a fixed topology, effectively “dumb” (tabula rasa to the philosophy efficonados). It is through training and exposure to data that the agent/network will learn how to behave. Thinking back to our original optimiser framework, the fixed system is the environment and an agent, where the environment can vaguely be “whatever we care to learn”. Whilst the weights are the configuration of the systems we want to optimise. The environment could be as mundane as a dataset for house sizes/prices to an interactive Atari game with a high score to beat. We let agents to interact with the dataset/environment and depending on their outcomes (e.g score on the game or correct house price), we change the weights of the neurons.</p>
-<figure><a href="https://xkcd.com/1838/"><img src="https://imgs.xkcd.com/comics/machine_learning.png"></a>
+<figure><a href="https://xkcd.com/1838/"><img src="https://imgs.xkcd.com/comics/machine_learning.png"/></a>
 </figure>
 
 <p>The very act of training a neural network is the optimisation. We search through the different values of each neuron such that the network performs better on a task. To do this search effectively we use a process called back propagation.</p>
@@ -301,10 +300,10 @@ Culture doesn&rsquo;t just affect our biology, it also alters our gene evolution
 <p><strong>Optimisers get faster at completing more difficult tasks</strong></p>
 <p>This statement is much harder to quantify so let&rsquo;s just outline a sketch. Entropy evolution is a tediously slow process, with irreversible processes taking thousands of years to create simple structure. Genes on the other hand replicate exceptionally quickly making even more complex structures. Next, if we compare genetic evolution with cultural evolution, we find the largest difference is that genes use survival to evaluate fitness whilst memes require other people to imitate them to evaluate fitness. Thus, the optimisation step for genes is once a generation whilst for memes it is almost instantaneous. Equally by considering markets, the true values of a resource propagate almost instantaneously, to the point that market equilibrium shift so quickly that government intervention is required at times.</p>
 <p>The rigorous way to evaluate this is to consider how big the search space is which each optimiser must travel through. Further considerations also include the nature of the surface, in terms of continuity and shape. For example, both surfaces shown below have minimum at the same point - however in the oscillatory example, its much harder to find the minimum.</p>
-<p><figure><img src="/post/history-through-optimisation/quadratic.png">
+<p><figure><img src="quadratic.png"/>
 </figure>
 
-<figure><img src="/post/history-through-optimisation/xsinx.png">
+<figure><img src="xsinx.png"/>
 </figure>
 </p>
 
