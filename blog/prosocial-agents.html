@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>an argument for prosocial agents - akbir khan</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <main>
+    <a href="./" class="back">&larr; blog</a>
+    <article>
+      <h1>an argument for prosocial agents</h1>
+      <p class="meta">November 2020</p>
+
+      <p>To build machine-learning systems (agents) that are useful in the real world, they need to be able to cooperate with each other and with humans, not only at deployment but throughout their lifetime. I predicate my research on this and the following beliefs:</p>
+
+      <p><strong>Multi-agent deployment</strong>: Transformative AI is unlikely to appear in isolation, but will instead be developed by multiple competing actors, giving rise to a large population of capable agents [1, 2].</p>
+
+      <p><strong>Multi-agent training</strong>: Transformative AI is likely to be produced by an automatic curriculum, and one promising approach for this is multi-agent curricula [3].</p>
+
+      <p><strong>Lifetime learning</strong>: Agents are not only trained then deployed in the real-world, but are continually trained afterwards. This training will likely be decentralised and within a population of competing agents, as such, the boundary between training and deployment will become less clear.</p>
+
+      <p>This creates the following concerns:</p>
+
+      <p><strong>It is difficult to deploy cooperative agents</strong>: Apriori, agents that are cooperative or altruistic are vulnerable to being exploited by more selfish agents. Thus, agents successful in competitive markets are likely to be selfishly motivated. Large populations of selfish agents easily lead to catastrophic events, for example large market failures [4] or resource exhaustion [5].</p>
+
+      <p><strong>It is difficult (post-deployment) to train cooperative agents</strong>: Agents that are trained in a population of selfish agents will be unable to develop cooperative strategies [6]. This restricts our ability to create cooperative agents over time, thus making selfish (misaligned) AI more likely.</p>
+
+      <p><strong>It is difficult to de-risk multi-agent systems</strong>: Transformative AI trained by multi-agent interactions are not only shaped by their reward function but the interactions with other agents in their population [7]. System failure cannot be attributed to a single-agent, thus work on (single agent) interpretability or reward modelling is likely insufficient to de-risk these interactions [8].</p>
+
+      <p>To address the risk from these concerns, we need to:</p>
+
+      <p><strong>Develop prosocial agents</strong>: Altruistic agents do not survive in competitive markets whilst the behaviour of selfish agents leads to cooperation failure [9]. Thus we require prosocial agents - those which actively seek (cooperative) optimal policies whilst being intolerant of exploitation. This behaviour mitigates the aforementioned concerns whilst sustaining the mechanisms of a competitive market.</p>
+
+      <p><strong>Ensure multi-agent curricula incentivise prosociality</strong>: We need to guarantee that weak AI retains its prosociality when trained post-deployment. Thus to ensure training still produces aligned AI, we need to build our understanding of these multi-agent systems, and build methods that continually incentivise prosociality.</p>
+
+      <p><small>
+        [1] <a href="https://www.alignmentforum.org/posts/dSAJdi99XmqftqXXq/eight-claims-about-multi-agent-agi-safety">Eight Claims About Multi-Agent AGI Safety</a><br>
+        [2] Critch, Andrew, and David Krueger. "AI Research Considerations for Human Existential Safety (ARCHES)." arXiv preprint arXiv:2006.04948 (2020).<br>
+        [3] Leibo, Joel Z., et al. "Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research." arXiv preprint arXiv:1903.00742 (2019).<br>
+        [4] <a href="https://en.wikipedia.org/wiki/2010_flash_crash">2010 Flash Crash</a><br>
+        [5] <a href="https://en.wikipedia.org/wiki/Resource_depletion">Resource depletion</a><br>
+        [6] Axelrod, Robert, and William Donald Hamilton. "The evolution of cooperation." science 211.4489 (1981): 1390-1396.<br>
+        [7] <a href="https://www.alignmentforum.org/posts/BXMCgpktdiawT3K5v/multi-agent-safety">Multi-agent Safety</a><br>
+        [8] Yudkowsky, Eliezer. Inadequate equilibria: Where and how civilizations get stuck. Machine Intelligence Research Institute, 2017.<br>
+        [9] <a href="https://longtermrisk.org/research-agenda">Long Term Risk Research Agenda</a>
+      </small></p>
+    </article>
+  </main>
+</body>
+</html>

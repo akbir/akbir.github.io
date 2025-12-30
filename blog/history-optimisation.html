@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>history through optimisation - akbir khan</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <main>
+    <a href="./" class="back">&larr; blog</a>
+    <article>
+      <h1>history through optimisation</h1>
+      <p class="meta">August 2020</p>
+
+      <h2>Introduction</h2>
+
+      <p>All decision tasks (questions with Yes-No answers) can be framed as optimisation tasks (minimum quantity for Yes), and as such, any problem can be considered the optimisation of some quantity. It's an attractive, though mostly useless framework, as optimisation tasks are much harder to solve. Yet somehow we're in a position, with advances in machine learning, where we have effective computational methods for optimisation. Thus problems in physics, anthropology and economics can be reframed as optimisations and with enough compute, could be replicated. Do I recommend we do this? Hell no. But if we want to create intelligent agents, it's worth looking at what processes led to the most intelligent agents we know, humans.</p>
+
+      <p>Before we start, we should clarify some terms. An optimisation is an abstraction for finding the "best" of something. It has 3 prerequisites; a <em>system</em>, a set of <em>configurations</em> and an <em>objective</em>. In general an optimiser finds the configurations of the system such that it best fits the quantity (objective). Below we set some ground rules:</p>
+
+      <ol>
+        <li>The system must be fixed/stable, this stops configurations or objectives changing as we talk about them or their values being distorted. We call this "closed" to show that nothing can enter or leave it (e.g resources or information).</li>
+        <li>Configurations can either be expressed as all the possible ways to organise a system (think outcomes of a dice roll) or can be described through their degrees of freedom.</li>
+        <li>Objectives can be vague but normally we want to be able to tell when our configuration is better or worse than another configuration (for the given objective). Mathematically, we'd at least like a partial ordering.</li>
+      </ol>
+
+      <p>In this work, I'll go through epochs of history, in which there existed a different predominant optimiser.</p>
+
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>Start/Nothing</li>
+        <li>Entropy/Sampling</li>
+        <li>Replicators/Evolution</li>
+        <li>Markets/Pareto Improvements</li>
+        <li>Agents/BackProp</li>
+        <li>Looking Forward</li>
+      </ol>
+
+      <p>In general, history is terrible at making future predictions, so take this work with a pinch of salt.</p>
+
+      <h2>Start/Nothing</h2>
+      <p><em>13.7 Billion Years (+1×10⁻⁴³ Sec) Ago</em></p>
+
+      <p>Something happens, nobody is quite sure when, but all we know is now we've got lots of energy in a tiny universe, and then suddenly there is a huge universe with plenty of space and time. At this very moment you can't really apply optimisers, you're looking at the most incredible dynamic system in our Universe's history. Thankfully this all calms down in less than 10⁻⁴³ of a second. Phew.</p>
+
+      <h2>Entropy/Sampling</h2>
+      <p><em>13.7 Billion - 4.3 Billion Years Ago</em></p>
+
+      <p>As everything is pushed away from everything else, it begins to cool and matter comes into existence. Most importantly it doesn't cool down uniformly, there is more stuff in some places than in others. Heavier quarks and leptons begin to decay. In their place, where pairs existed, neutrons and protons are beginning to form.</p>
+
+      <p>In a general sense, we now have today's universe and we have an infinite number of configurations for how matter is organised in this space. So where's the optimisation? For the next 10 billion years (or so), the optimisation is governed (more or less exclusively) by the second law of thermodynamics, where the total entropy of an isolated system can never decrease over time. This introduces our metric: entropy.</p>
+
+      <p><strong>What is entropy?</strong></p>
+
+      <p>Entropy as an equation is seemingly simple but doesn't explain much. A much better intuition: Imagine my desk at two different times. Desk 1 is exceptionally well organised, my pen pot is always in the top left corner 1cm from the edge, and my papers and pens are meticulously laid out in order - if I were to move a single pen and replace it with paper, you'd notice the state has changed.</p>
+
+      <p>Now let's look at Desk 2, it's a mess. I have a cluster of pens and pencils around my desk. Some paper is on top of pens and vice-versa. Let's do the same swap of a pen with paper. Would you be able to notice? Without better organisation you probably wouldn't notice the state has changed.</p>
+
+      <p>Note that Desk 1 and Desk 2 are the same system and we have the same precision in both scenarios, what's different is that Desk 2 has significantly higher disorder than Desk 1. Thus we say Desk 2 has a higher entropy compared to Desk 1. So entropy becomes this measure of ways we can internally swap things but keep the same outward appearance.</p>
+
+      <p><strong>Randomly try everything</strong></p>
+
+      <p>But how does this apply in the general world - where is the entropy change in my day to day experiences? When I drop a pen, why does it end up on the ground? Why do atoms form covalent bonds and why does temperature spread out?</p>
+
+      <p>In all the above cases, we're still maximising entropy, but we're using a cheeky equation which links to free energy. The Gibbs free energy is given by G = H − TS, where H is the Enthalpy, T is the absolute temperature, and S is the entropy. The most important takeaway is that (for fixed temperature) as Free Energy gets smaller, Entropy gets bigger.</p>
+
+      <p>Most of classical physics focuses on explaining actions through the lens of minimising free energy. When I drop a pen, the pen wants to be in the lowest free energy state possible, so it minimises its gravitational potential energy. When atoms form covalent bonds, electrons are being shared to minimise the total free energy of the combined system.</p>
+
+      <p>So how does the optimisation take place? How do we end up in these optimal configurations? Physics seems to randomly sample a distribution when not in a thermodynamic limit and in the larger scale it's boringly always in the correct state.</p>
+
+      <h2>Replicators/Evolution</h2>
+      <p><em>4.3 Billion Years Ago - 300,000 BCE</em></p>
+
+      <p>At some point molecules become larger nucleotides and then RNA molecules. These molecules are able to replicate themselves. Replication increases entropy as it's a non-reversible process. What's interesting is that the features of RNA are dependent on the arrangement of its nitrogenous bases (ACGU) bases.</p>
+
+      <p>Here we see our first optimiser handover, from entropy to replication. Earth is finite, with fixed space and resources. The arrangement of nitrogenous base, which provide a replicator its features, become the set of configurations. Optimisation is driven by the fact that replicators must compete for fixed resources.</p>
+
+      <p>This is your standard theory of evolution - Generally, we have a generation at time Gₜ, which contains copies (with variation) related to who was most successful in Gₜ₋₁. The most successful members of generation Gₜ, then make copies of themselves for Gₜ₊₁.</p>
+
+      <p><strong>Adding Spice to Optimisation</strong></p>
+      <p><em>300,000 - 3000 BCE</em></p>
+
+      <p>Some of these gene replicators eventually grow into homo sapiens, whose collective information, which is passed from generation to generation, becomes an even more interesting replicator - Culture.</p>
+
+      <p>Culture is all the information you've learnt from others, as opposed to the instinct you were born with. We can consider single units of cultural replicators as memes - think memes/culture as equivalent to genes/phenotype.</p>
+
+      <p>Let's examine spice. Other animals do not spice their food, it provides little nutrition and the active ingredients are aversive chemicals. Yet our cooking seems to optimise for effective spice use. The answer is that spice has antimicrobial properties, which reduce the risk of pathogens from foods (especially meat).</p>
+
+      <p>So what cool ideas have memes spread? Firstly through culture evolution we've devised languages - efficient mechanisms to convey information from people to people. Culture doesn't just affect our biology, it also alters our gene evolution. This is aptly named Gene-Culture coevolution and this is what makes humans intelligent.</p>
+
+      <h2>Markets/Pareto Improvements</h2>
+      <p><em>3000 BCE - 2020 AD</em></p>
+
+      <p>Sapiens got really good at taking stuff and making more of it. We even gave the extra stuff we make a name - gross produce. Markets fixed a problem we didn't even realise we had: some people have more resources than they can use and some people really didn't have enough.</p>
+
+      <p>What we want is for resource allocation to be Pareto optimal. This is just econ chat for saying - there exists no changes that could improve the output without reducing other variables.</p>
+
+      <p><strong>The Invisible Hand</strong></p>
+
+      <p>Adam Smith (certified GOAT) described the optimiser of the market as "The Invisible Hand" which pushes us toward a Pareto Optimal state. Mathematically, given certain (almost ludicrous) assumptions, markets will settle into these optima.</p>
+
+      <p>Let's say Mr. Burns has got in the business of making premium sneakers - Air Jordans. He may see an opportunity to refine his technology and require less labour for the same number of Jordans. He makes this decision to reduce costs and improve profits. This is a Pareto improvement.</p>
+
+      <p>In a perfect market, where there's low barriers to entry and perfect information, eventually somebody is going to copy him. These new entrants will tolerate a lower profit margin and set their products at a lower price. This is a Pareto improvement for them. The market will continue to make these improvements until no single agent can make one - at this point we'll fundamentally be at a Pareto optimal market.</p>
+
+      <p>As the market churns in the background, a problem continues to be that labour is expensive. As such, there is a massive incentive to reduce the need for labour, be it in the invention of the steam engine or in electricity to transport work efficiently. Eventually this leads to compute being so readily available that another form of optimisation could begin - in 2008 Geoffrey Hinton demonstrated how we could use stochastic gradient descent to train neural networks to complete human level vision tasks.</p>
+
+      <h2>Agents/BackProp</h2>
+      <p><em>2020 - Dunno</em></p>
+
+      <p>"Agent" is a deliberately ambiguous term to describe anything which takes "actions". When we talk about agents (such as MuZero) we're talking about lines of code which to some capacity take inputs of an environment (e.g board of Chess/Go/Shogi) and outputs the next best move.</p>
+
+      <p>Currently our smartest agents are built from neural networks, a formulation of computing inspired by how neurons are wired in biological intelligence. A network consists of many densely connected neurons each with their own associated weight.</p>
+
+      <p>Agents start with random weights and a fixed topology, effectively "dumb" (tabula rasa). It is through training and exposure to data that the agent/network will learn how to behave. The very act of training a neural network is the optimisation. We search through the different values of each neuron such that the network performs better on a task. To do this search effectively we use a process called back propagation.</p>
+
+      <p>So how does this algorithm relate to self driving cars, talking chatbots and world class Go players? Well in each case, we're simply training agents with labelled data. For self-driving cars we take thousands of hours of footage and ask networks to learn to correctly predict how humans would act. For talking chat-bots we scrape thousands of lines of text, blanking out words and ask neural networks to correctly predict the blank spaces.</p>
+
+      <h2>Looking Forward</h2>
+
+      <p>So is backprop the path to full blown artificial general intelligence (AGI)? I think our most promising mechanism to reach AGI is iterative amplification. Amplification is when we set agents the tasks of building smarter agents, who in turn build even smarter agents.</p>
+
+      <p>This a compelling approach, as it falls into our world view - where we optimise until we find a new more efficient optimiser. Here are some key takeaways from our previous sections:</p>
+
+      <p><strong>Optimisers create positive improvement loops</strong> - Culture created language to allow for faster cultural optimisation, markets create more resources for even more resource optimisation, and genes influence their environment and resources to support even more variants.</p>
+
+      <p><strong>New optimisers turn up quicker and quicker</strong> - Look at the interval between optimiser handovers, entropy took 10 billion years to create genes, 4 billion years later culture appears, and takes only a mere 100,000 years to form markets. Under markets and their pressures, it's 3000 years to make agents.</p>
+
+      <p><strong>Strong optimisers, can go more wrong</strong> - Entropy optimisation rarely goes wrong. When genes incorrectly optimise we get cancer cells. Culture can create harmful memes - the worst (such as nukes) are cause for existential risk. Each optimisation can go wrong - and with it we must appreciate that the impact of misaligned agents will be even more catastrophic.</p>
+
+      <p><strong>Optimisers get faster at completing more difficult tasks</strong> - Entropy evolution is a tediously slow process. Genes replicate exceptionally quickly making even more complex structures. Cultural evolution is almost instantaneous. Just as we apply ourselves to create better versions of these - can the same be done with agents?</p>
+    </article>
+  </main>
+</body>
+</html>
