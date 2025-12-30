@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>golang's rand and concurrency - akbir khan</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <main>
+    <a href="./" class="back">&larr; blog</a>
+    <article>
+      <h1>golang's rand and concurrency</h1>
+      <p class="meta">April 2020</p>
+
+      <p>This is a bug I encountered when writing a ray-tracer in Golang and thought it was worth a quick share.</p>
+
+      <h3>The Idea</h3>
+
+      <p>When rendering an image using a ray-tracer, each pixel value can theoretically be calculated independently, making parallelisation an attractive prospect. When rendering the image, we iterate through each position and call the sample method to calculate RGB value for that pixel.</p>
+
+      <p>Go makes running threads (go routines) really simple and so the idea was to split the for loop into separate threads. Where the <code>k</code>-th thread would calculate the <code>[k, 2k, ... , nk]</code>-th position pixels within the row.</p>
+
+      <p>Now lets check the runtimes:</p>
+
+      <pre><code># Single Thread
+Elapsed: 1m54.230536119s
+# Multiple Threads
+Elapsed: 4m13.680876913s</code></pre>
+
+      <p>Unfortunately this didn't speed things up, even worse, it increased the runtime!</p>
+
+      <h3>The Bug</h3>
+
+      <p>If threading was making my program slower, then each thread was clearly unable to act independently. So lets check out sample method.</p>
+
+      <p>After some debugging (shout out <code>pprof</code>), I noticed that an incredible amount of time was being used by <code>math/rand</code> and the associated synchronisation overhead. Taking a quick look at the <a href="https://golang.org/src/math/rand/rand.go">source code</a>, I notice that the package is globally locked.</p>
+
+      <p>For random number generators (RNGs) this makes perfect sense, as RNGs generally calculate the next random number based on the previous, and we'd like RNG to be consistently random across processes. This is good behaviour — however not ideal in our situation.</p>
+
+      <h3>The Fix</h3>
+
+      <p>To circumvent this issue and gain all the speed benefits of threading, we'd need to provide each thread its own RNG. Thankfully this is fairly simple within go, as the rand package has methods to create unique RNGs, which can be created for each thread independently.</p>
+
+      <p>All the existing <code>math/rand</code> calls must be switched to call our RNG instead.</p>
+
+      <h3>The Results</h3>
+
+      <p>After some tuning of the number of threads to use (as suggested by a friend 2*NumCores), my final speed up was:</p>
+
+      <pre><code># Multiple Threads
+Elapsed: 23.765684225s</code></pre>
+
+      <p>which was a nice 4x speed up!</p>
+
+      <p><small>Full code examples available in the <a href="https://gist.github.com/akbir">original gists</a>.</small></p>
+    </article>
+  </main>
+</body>
+</html>
