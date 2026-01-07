@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hurdles - akbir khan</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <main>
+    <a href="./" class="back">&larr; blog</a>
+    <article>
+      <h1>hurdles</h1>
+      <p class="meta">December 2024</p>
+
+      <p><em>An intuition pump for living on the exponential, and why the risk from mis-aligned AI is much closer than you think.</em></p>
+
+      <details>
+        <summary><strong>A Fun Problem [click to expand]</strong></summary>
+
+        <p><strong>Question:</strong> There are infinitely evenly spaced signposts ahead of you. You start from the 0th signpost at velocity 1m/s with an exponential acceleration. At what time interval do you reach the nth signpost, and how does this term change over time?</p>
+
+        <p><strong>Answer:</strong> Suppose you start at rest with unit velocity, accelerating exponentially:</p>
+
+        <p>$$v(t) = e^{kt}$$</p>
+
+        <p>Integrating to get the position:</p>
+
+        <p>$$x(t) = \frac{1}{k}(e^{kt} - 1)$$</p>
+
+        <p>Place hurdles at evenly spaced distances $D, 2D, 3D, \ldots$ To find when you arrive at each, solve $x(t) = nD$:</p>
+
+        <p>$$t_n = \frac{1}{k} \cdot \ln(nkD + 1)$$</p>
+
+        <p>The time gap between hurdle $n$ and hurdle $n+1$ is:</p>
+
+        <p>$$\Delta t_n = \frac{1}{k} \cdot \ln[(n+1)kD + 1] - \frac{1}{k} \cdot \ln[nkD + 1]$$</p>
+
+        <p>$$\Delta t_n = \frac{1}{k} \cdot \ln\left[\frac{nkD + kD + 1}{nkD + 1}\right]$$</p>
+
+        <p>For large $n$ (or large $kD$), this simplifies. When $nkD \gg 1$:</p>
+
+        <p>$$\frac{nkD + kD + 1}{nkD + 1} \approx \frac{n+1}{n}$$</p>
+
+        <p>So:</p>
+
+        <p>$$\Delta t_n \approx \frac{1}{k} \cdot \ln\left(\frac{n+1}{n}\right) = \frac{1}{k} \cdot \ln\left(1 + \frac{1}{n}\right)$$</p>
+
+        <p>Using the approximation $\ln(1 + x) \approx x$ for small $x$:</p>
+
+        <p>$$\Delta t_n \approx \frac{1}{kn}$$</p>
+
+        <p>The time gaps shrink like $1/n$ – the harmonic series. The tenth hurdle arrives approximately $1/10$ as long as the first. The hundredth in $1/100$th. The gaps compress, but never quite to zero. You keep hitting hurdles forever, just faster and faster.</p>
+      </details>
+
+      <h3>Accelerating is weird</h3>
+
+      <p>The first hurdle takes a while to reach. The second takes less. The third, less still. The gaps in time between each hurdle shrink – not by a constant amount, but proportionally. The gap to the tenth hurdle is roughly a tenth of the time to the first. The hundredth, a hundredth.</p>
+
+      <p>The hurdles don't move, but from your frame they appear to rush toward you, bunching together on the horizon.</p>
+
+      <p>This is how I've come to think about the major risks ahead of us from advanced AI. There are many hurdles we must clear: economic disruption, international conflict, and misaligned superintelligence. Standing still, these might seem comfortably spaced – job displacement in 10 years, weaponised AI in 20, existential risk in 30. But we're not standing still; We're accelerating. And on an exponential trajectory, evenly spaced problems arrive harmonically – each gap shorter than the last, coming at us quicker and quicker.</p>
+
+      <p>I've spent a year at Anthropic, and in general, I'm more optimistic about the state of risks from misaligned AI than ever before. Opus is generating a positive narrative that future AI will look back at. We can now examine the internal workings of neural networks and identify causal explanations for their actions, and scalable oversight appears robust to optimisation so far. However, even with such positive traction, I still see the need to be wary of the oncoming hurdles – and crucially, how quickly they'll arrive.</p>
+
+      <h3>An example set of hurdles</h3>
+
+      <h3>Hurdle 1: Economic Impacts</h3>
+
+      <p>Advanced AI will enable a huge productivity leap in terms of what an individual is capable of doing. At a minimum, we should anticipate a large amount of job destruction in the near term.</p>
+
+      <p>In the long term (30 years +) the loss of jobs will be resolved. However, as a society, we've never been good at reallocating labour or retraining individuals during these periods of transition. In the short term, we should expect 10-15 years of lots of people not having jobs, not affording a level of wealth their parents had, or more fundamentally, not being able to find purpose in life. This will hit the youngest the most – fresh graduates trained in degrees which have not prepared them for the new world.</p>
+
+      <p><em>Hurdle 1 is likely to arrive later than anticipated in full force, as technologies diffuse slowly into the general public.</em></p>
+
+      <h3>Hurdle 2: International Conflict</h3>
+
+      <p>Staying ahead of such technology will become an increasingly important goal of national interest. As access to models directly relates to a country's prosperity (as it fuels much of the basic economic work), we should expect world powers to contend for their share and for other natural resources associated with them (silicon, water, electricity).</p>
+
+      <p>The cost of warfare will also take a phase shift. Autonomous systems are expected to enter combat zones within the next 10 years. Cyber warfare is also drastically growing. As is evident in industry, leading in AI is self-perpetuating and enables further progress. The same dynamics will apply here.</p>
+
+      <p>I worry this hurdle is also the most opaque. Unless you choose to watch war footage, you haven't seen how prevalent drone warfare has become. Nations, to retain a strategic advantage, also rarely disclose when cyber attacks occur.</p>
+
+      <p><em>Hurdle 2 is likely to occur more quickly than expected, as the cost of adopting military R&D cycles has decreased as we've removed many humans from the loop.</em></p>
+
+      <h3>Hurdle 3: Misaligned Superintelligence</h3>
+
+      <p>The final hurdle is the risk of misaligned superintelligence – a super-intelligent being which may have goals different to ours. This is likely an issue during a rapid takeoff, in which models are being used to help steer, oversee and train their successors. Our understanding of generalisation is still very naive, and as such, guarantees on stronger models (weak-to-strong generalisation) are poorly understood.</p>
+
+      <p>We generate a model which is misaligned within some epsilon, and this error will propagate to the next generation and the generation after. It will bootstrap into a model which conducts research sabotage and will eventually be unbounded.</p>
+
+      <p>Maybe it wants to just be left alone, but optimal policies are normally power-seeking and, as such, will have a tendency to hoard resources. I don't pretend to know how that plays out, but if our actions towards less intelligent creatures are anything to go by, we should not expect our new creations to be any kinder to us.</p>
+
+      <h3>Hurdles are part of the speed up</h3>
+
+      <p>These hurdles aren't independent - they cascade. Economic disruption forces states to recognise the transformation; state awareness drives military R&D; military investment compresses the timeline to Hurdle 3 by funding capability research with fewer constraints and creating pressure to automate oversight itself.</p>
+
+      <p>This is what the metaphor is for. We perceive these risks as evenly spaced: job displacement in one decade, militarisation in two, and existential risk in three. But on an exponential trajectory, evenly spaced problems arrive harmonically. The tenth hurdle comes in a tenth of the time. The hundredth, a hundredth. The implication isn't doom. It's that we should evaluate AI risks by when they'll arrive at current acceleration, not by how far away they seem standing still.</p>
+    </article>
+  </main>
+</body>
+</html>
